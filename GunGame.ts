@@ -1,13 +1,40 @@
 // To be implemented: 
-// - Kill with melee weapon steals a level from killed enemy and a hole level 
-//      ToDo: Implemented but not tested yet. 
+// x Kill with melee weapon steals a level from killed enemy and a hole level 
+//      Implemented in Version 0.2.2
 // - Add messages for Start, Taken the lead, Knifed, Close to winning, Win
 // - Randomize weapon list at start of game, depending on numberOfWeapons.
 // - Automatic Spawn at the Spawnpoint furthest away from enemies 
-// - Add Basic Scoreboard showing Level, Kills, Deaths 
+// x Add Basic Scoreboard showing Level, Kills, Deaths 
+//      Implemented in Version 0.3.0
 // - Add UI to display current level, weapon and kills needed to level up, next weapon 
 // - Add sound effects for leveling up and winning
 
+
+
+/* Config */
+const VERSION = [0, 3, 0];
+const debug = true;
+let GameEnded: boolean = false;  
+let scoreboard: Scoreboard | null = null;
+
+interface GameModeConfig {
+    maxLevel: number;
+    GunGameSet: GunGameSet;
+    timeLimit: number;
+//   freezeTime: number;
+//   progressStageEarly: number;
+//   progressStageMid: number;
+//   progressStageLate: number;
+//   team1ID: number;
+//   team2ID: number;
+//   hqRoundStartTeam1: number;
+//   hqRoundStartTeam2: number;
+//   hqInProgressTeam1: number;
+//   hqInProgressTeam2: number;
+//   respawnAreaTriggerID: number;
+//   maxStartingAmmo: boolean;
+//   startSpawnPointID: number;
+}
 
 /* Types */
 class JsPlayer {
@@ -35,7 +62,7 @@ class JsPlayer {
         JsPlayer.playerInstances.push(this.player);
         JsPlayer.jsPlayerInstances.push(this);
         this.isAi = mod.GetSoldierState(this.player, mod.SoldierStateBool.IsAISoldier);
-        if (debugJSPlayer) {console.log("Adding Player [", mod.GetObjId(this.player), "] Creating JS Player: ", JsPlayer.playerInstances.length)};
+        if (debug) {console.log("Adding Player [", mod.GetObjId(this.player), "] Creating JS Player: ", JsPlayer.playerInstances.length)};
     }
 
 
@@ -53,12 +80,12 @@ class JsPlayer {
     }
 
     public GetCurrentWeaponSet(): WeaponLevelSet{
-        return CurrentGunGameSet.WeaponSets[this.level];
+        return GAMEMODE_CONFIG.GunGameSet.WeaponSets[this.level];
     }
 
     public applyWeapon(){
         const weaponSet = this.GetCurrentWeaponSet();
-        if (debugJSPlayer) console.log("applyWeapon: give Weapon ", weaponSet.Weapon?.toString(), "to ", this.playerId);
+        if (debug) console.log("applyWeapon: give Weapon ", weaponSet.Weapon?.toString(), "to ", this.playerId);
         if (weaponSet.Weapon) {
             if (weaponSet.WeaponPack)
                 mod.AddEquipment(this.player, weaponSet.Weapon, weaponSet.WeaponPack, weaponSet.InventorySlot);
@@ -68,27 +95,27 @@ class JsPlayer {
             mod.AddEquipment(this.player, weaponSet.Gadget, weaponSet.InventorySlot);
         }
         mod.ForceSwitchInventory(this.player, weaponSet.InventorySlot);
-        if (debugJSPlayer) console.log("applyWeapon: given Weapon ", weaponSet.Weapon?.toString(), "to ", this.playerId);
+        if (debug) console.log("applyWeapon: given Weapon ", weaponSet.Weapon?.toString(), "to ", this.playerId);
     }
 
     public removeWeapon(){
         const weaponSet = this.GetCurrentWeaponSet();
-        if (debugJSPlayer) console.log("removeWeapon: remove ", weaponSet.InventorySlot.toString(), " from ", this.playerId);
+        if (debug) console.log("removeWeapon: remove ", weaponSet.InventorySlot.toString(), " from ", this.playerId);
         mod.RemoveEquipment(this.player, weaponSet.InventorySlot);
-        if (debugJSPlayer) console.log("removeWeapon: removed ", weaponSet.InventorySlot.toString(), " from ", this.playerId);
+        if (debug) console.log("removeWeapon: removed ", weaponSet.InventorySlot.toString(), " from ", this.playerId);
     }
 
     private adjustLevel(adjustment: number){
         this.level = this.level + adjustment;
         scoreboard?.update(this);
-        if (debugJSPlayer) console.log("adjustLevel: Adjusted Level of", this.playerId, "to", this.level);
+        if (debug) console.log("adjustLevel: Adjusted Level of", this.playerId, "to", this.level);
 
     }
 
     public async addLevel(){
         this.removeWeapon();
         this.adjustLevel(1);
-        if (debugJSPlayer) console.log("addLevel: Player ", this.playerId, "advanced to level ", this.level);
+        if (debug) console.log("addLevel: Player ", this.playerId, "advanced to level ", this.level);
         if (await this.checkWinCondition()){
             return;
         }
@@ -99,7 +126,7 @@ class JsPlayer {
     public demote(){
         this.removeWeapon();
         this.adjustLevel(-1);
-        if (debugJSPlayer) console.log("demote: Player", this.playerId, "demoted to Level", this.level);
+        if (debug) console.log("demote: Player", this.playerId, "demoted to Level", this.level);
         // leave killsInLevel unchanged as a bonus
         this.applyWeapon();
     }
@@ -114,8 +141,8 @@ class JsPlayer {
     }
 
     public async checkWinCondition(): Promise<boolean> {
-        if (this.level >= maxLevel) {
-            if (debugJSPlayer) console.log("CheckWinCondition: Player ", this.playerId, "won! Ending Game");
+        if (this.level >= GAMEMODE_CONFIG.maxLevel) {
+            if (debug) console.log("CheckWinCondition: Player ", this.playerId, "won! Ending Game");
             GameEnded = true;
             JsPlayer.jsPlayerInstances.forEach(player => {
                 if (player.isAi){
@@ -287,14 +314,30 @@ function CheckCorrectPlayerWeaponEquipped(jsPlayer: JsPlayer): boolean {
     return correctWeaponEquipped && isCorrectSlotActive;
 }
 
-// Settings
 
-const VERSION = [0, 2, 2];
-const debugJSPlayer = true;
-let maxLevel = 3; 
-let GameEnded: boolean = false;  
-let CurrentGunGameSet: GunGameSet = StandardGunGame;
-let scoreboard: Scoreboard | null = null;
+const GAMEMODE_CONFIG: GameModeConfig = {
+    maxLevel: 3,
+    GunGameSet: StandardGunGame,
+    timeLimit: 10*60, // 10 minutes
+//   score: 75, // 75 kills to win
+//   freezeTime: 15, // Seconds of freeze time at round start
+//   timeLimit: 10 * 60 + 15, // 10 minutes + freeze time
+//   progressStageEarly: 20, // How many kills to trigger early progress VO
+//   progressStageMid: 40, // How many kills to trigger mid progress VO
+//   progressStageLate: 65, // How many kills to trigger late progress VO
+//   team1ID: 1,
+//   team2ID: 2,
+//   // Beginning HQs - place these in Godot where players spawn at match start
+//   hqRoundStartTeam1: 1,
+//   hqRoundStartTeam2: 2,
+//   // In-progress HQs - place these outside the map, surrounded by area trigger
+//   hqInProgressTeam1: 11,
+//   hqInProgressTeam2: 12,
+//   respawnAreaTriggerID: 1000, // AreaTrigger that surrounds the in-progress HQs
+//   maxStartingAmmo: true,
+//   startSpawnPointID: 9001, // Starting ID for spawn point SpatialObjects. Your spawners need to be a SpatialObject (any object that is an actual prop) in incremental IDs starting from startSpawnPointID or they'll not be parsed
+};
+
 
 
 // -------------------------------
@@ -313,12 +356,12 @@ export async function OnPlayerJoinGame(player: mod.Player) {
 export function OnPlayerDeployed(eventPlayer: mod.Player): void {
     let jsPlayer = JsPlayer.get(eventPlayer);
     if (!jsPlayer){
-        if (debugJSPlayer) {console.log("OnPlayerDeployed: No JSPlayer for ", mod.GetObjId(eventPlayer))};
+        if (debug) {console.log("OnPlayerDeployed: No JSPlayer for ", mod.GetObjId(eventPlayer))};
         return;
     }
     jsPlayer.IsDeployed = true;
     jsPlayer.LastDeployTime = mod.GetMatchTimeElapsed();
-    if (debugJSPlayer) console.log("Player ", mod.GetObjId(eventPlayer), " deployed on Level ", jsPlayer.level);
+    if (debug) console.log("Player ", mod.GetObjId(eventPlayer), " deployed on Level ", jsPlayer.level);
     jsPlayer.applyWeapon();
 
 }
@@ -383,9 +426,9 @@ export async function OnGameModeStarted() {
     scoreboard.initializeOnGameStart();
     mod.SetFriendlyFire(false);
     mod.SetSpawnMode(mod.SpawnModes.Deploy);
-    mod.SetGameModeTargetScore(maxLevel+1);
+    mod.SetGameModeTargetScore(GAMEMODE_CONFIG.maxLevel+1);
     mod.SetGameModeTimeLimit(10 * 60); // 10 minutes
-    CurrentGunGameSet = StandardGunGame;
+    GAMEMODE_CONFIG.GunGameSet = StandardGunGame;
     GameEnded = false;
 }
 
