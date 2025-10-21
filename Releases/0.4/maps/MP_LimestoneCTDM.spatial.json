@@ -1,0 +1,2290 @@
+{
+    "Portal_Dynamic": [
+        {
+            "name": "DeployCam",
+            "ObjId": 444,
+            "type": "DeployCam",
+            "right": {
+                "x": 1,
+                "y": -4.37114e-08,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1.91069e-15,
+                "z": -1
+            },
+            "front": {
+                "x": 4.37114e-08,
+                "y": 1,
+                "z": 1.91069e-15
+            },
+            "position": {
+                "x": 331,
+                "y": 165,
+                "z": 93
+            },
+            "id": "DeployCam"
+        },
+        {
+            "name": "TEAM_1_HQ_GAMESTARTED",
+            "ObjId": 11,
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 0.999941,
+                "y": 0,
+                "z": -0.0108906
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.0108906,
+                "y": 0,
+                "z": 0.999941
+            },
+            "position": {
+                "x": 332.296,
+                "y": 79.0111,
+                "z": 28.3832
+            },
+            "id": "GAMESTARTED_HQS/TEAM_1_HQ_GAMESTARTED"
+        },
+        {
+            "name": "TEAM_2_HQ_GAMESTARTED",
+            "Team": "Team2",
+            "AltTeam": "Team1",
+            "ObjId": 12,
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 0.999941,
+                "y": 0,
+                "z": -0.0108906
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.0108906,
+                "y": 0,
+                "z": 0.999941
+            },
+            "position": {
+                "x": 332.296,
+                "y": 79.0111,
+                "z": 28.3832
+            },
+            "id": "GAMESTARTED_HQS/TEAM_2_HQ_GAMESTARTED"
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 1000,
+            "Area": "GAMESTARTED_HQS/AreaTrigger/PolygonVolume",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 0.999941,
+                "y": 0,
+                "z": -0.0108906
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.0108906,
+                "y": 0,
+                "z": 0.999941
+            },
+            "position": {
+                "x": 332.296,
+                "y": 79.0111,
+                "z": 28.3832
+            },
+            "id": "GAMESTARTED_HQS/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "PolygonVolume",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "GAMESTARTED_HQS/AreaTrigger/PolygonVolume",
+            "height": 0,
+            "points": [
+                {
+                    "x": 330.73527,
+                    "y": 79.0111,
+                    "z": 26.83721
+                },
+                {
+                    "x": 330.65977,
+                    "y": 79.0111,
+                    "z": 29.97237
+                },
+                {
+                    "x": 333.77793,
+                    "y": 79.0111,
+                    "z": 29.94579
+                },
+                {
+                    "x": 333.90138,
+                    "y": 79.0111,
+                    "z": 26.95033
+                }
+            ]
+        },
+        {
+            "name": "TEAM_2_HQ",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 2,
+            "InfantrySpawns": [
+                "TEAM_2_HQ/SpawnPoint",
+                "TEAM_2_HQ/SpawnPoint2",
+                "TEAM_2_HQ/SpawnPoint3",
+                "TEAM_2_HQ/SpawnPoint4",
+                "TEAM_2_HQ/SpawnPoint5",
+                "TEAM_2_HQ/SpawnPoint6",
+                "TEAM_2_HQ/SpawnPoint7",
+                "TEAM_2_HQ/SpawnPoint8",
+                "TEAM_2_HQ/SpawnPoint9",
+                "TEAM_2_HQ/SpawnPoint10",
+                "TEAM_2_HQ/SpawnPoint11",
+                "TEAM_2_HQ/SpawnPoint12",
+                "TEAM_2_HQ/SpawnPoint13",
+                "TEAM_2_HQ/SpawnPoint14",
+                "TEAM_2_HQ/SpawnPoint15",
+                "TEAM_2_HQ/SpawnPoint16"
+            ],
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 371.092,
+                "y": 64.3295,
+                "z": 96.0368
+            },
+            "id": "TEAM_2_HQ",
+            "linked": [
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint",
+            "ObjId": 447,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.481494,
+                "y": 0,
+                "z": 0.87645
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.87645,
+                "y": 0,
+                "z": 0.481494
+            },
+            "position": {
+                "x": 379.60573,
+                "y": 66.5546,
+                "z": 108.7627
+            },
+            "id": "TEAM_2_HQ/SpawnPoint"
+        },
+        {
+            "name": "SpawnPoint2",
+            "ObjId": 2,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.910785,
+                "y": 0,
+                "z": 0.412882
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.412882,
+                "y": 0,
+                "z": 0.910785
+            },
+            "position": {
+                "x": 369.69973,
+                "y": 64.752062,
+                "z": 108.019
+            },
+            "id": "TEAM_2_HQ/SpawnPoint2"
+        },
+        {
+            "name": "SpawnPoint3",
+            "ObjId": 3,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.448836,
+                "y": 0,
+                "z": 0.893614
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.893614,
+                "y": 0,
+                "z": 0.448836
+            },
+            "position": {
+                "x": 376.42879,
+                "y": 64.350107,
+                "z": 92.85557
+            },
+            "id": "TEAM_2_HQ/SpawnPoint3"
+        },
+        {
+            "name": "SpawnPoint4",
+            "ObjId": 4,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.427815,
+                "y": 0,
+                "z": 0.903866
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.903866,
+                "y": 0,
+                "z": 0.427815
+            },
+            "position": {
+                "x": 383.7019,
+                "y": 66.54914,
+                "z": 104.93768
+            },
+            "id": "TEAM_2_HQ/SpawnPoint4"
+        },
+        {
+            "name": "SpawnPoint5",
+            "ObjId": 5,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.383619,
+                "y": 0,
+                "z": 0.923492
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.923492,
+                "y": 0,
+                "z": 0.383619
+            },
+            "position": {
+                "x": 361.71438,
+                "y": 62.70525,
+                "z": 87.24402
+            },
+            "id": "TEAM_2_HQ/SpawnPoint5"
+        },
+        {
+            "name": "SpawnPoint6",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.717665,
+                "y": 0,
+                "z": 0.696389
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.696389,
+                "y": 0,
+                "z": 0.717665
+            },
+            "position": {
+                "x": 370.945516,
+                "y": 62.70525,
+                "z": 80.4816
+            },
+            "id": "TEAM_2_HQ/SpawnPoint6"
+        },
+        {
+            "name": "SpawnPoint7",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.57609,
+                "y": 0,
+                "z": 0.817386
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.817386,
+                "y": 0,
+                "z": 0.57609
+            },
+            "position": {
+                "x": 366.42739,
+                "y": 62.70525,
+                "z": 83.7752
+            },
+            "id": "TEAM_2_HQ/SpawnPoint7"
+        },
+        {
+            "name": "SpawnPoint8",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.591267,
+                "y": 0,
+                "z": 0.806476
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.806476,
+                "y": 0,
+                "z": 0.591267
+            },
+            "position": {
+                "x": 374.59191,
+                "y": 63.786257,
+                "z": 87.21413
+            },
+            "id": "TEAM_2_HQ/SpawnPoint8"
+        },
+        {
+            "name": "SpawnPoint9",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.133865,
+                "y": 0,
+                "z": 0.991
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.991,
+                "y": 0,
+                "z": -0.133865
+            },
+            "position": {
+                "x": 369.22973,
+                "y": 63.842928,
+                "z": 91.67527
+            },
+            "id": "TEAM_2_HQ/SpawnPoint9"
+        },
+        {
+            "name": "SpawnPoint10",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.117919,
+                "y": 0,
+                "z": 0.993023
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.993023,
+                "y": 0,
+                "z": 0.117919
+            },
+            "position": {
+                "x": 374.11373,
+                "y": 66.5799,
+                "z": 111.8667
+            },
+            "id": "TEAM_2_HQ/SpawnPoint10"
+        },
+        {
+            "name": "SpawnPoint11",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 369.33654,
+                "y": 64.445223,
+                "z": 98.24186
+            },
+            "id": "TEAM_2_HQ/SpawnPoint11"
+        },
+        {
+            "name": "SpawnPoint12",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.99982,
+                "y": 0,
+                "z": -0.0189706
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.0189706,
+                "y": 0,
+                "z": 0.99982
+            },
+            "position": {
+                "x": 367.01491,
+                "y": 64.789339,
+                "z": 103.06182
+            },
+            "id": "TEAM_2_HQ/SpawnPoint12"
+        },
+        {
+            "name": "SpawnPoint13",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 373.47869,
+                "y": 64.536997,
+                "z": 96.989841
+            },
+            "id": "TEAM_2_HQ/SpawnPoint13"
+        },
+        {
+            "name": "SpawnPoint14",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.225631,
+                "y": 0,
+                "z": 0.974213
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.974213,
+                "y": 0,
+                "z": 0.225631
+            },
+            "position": {
+                "x": 368.5533,
+                "y": 62.70525,
+                "z": 81.569
+            },
+            "id": "TEAM_2_HQ/SpawnPoint14"
+        },
+        {
+            "name": "SpawnPoint15",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.605141,
+                "y": 0,
+                "z": 0.796118
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.796118,
+                "y": 0,
+                "z": 0.605141
+            },
+            "position": {
+                "x": 364.35784,
+                "y": 62.70525,
+                "z": 85.6068
+            },
+            "id": "TEAM_2_HQ/SpawnPoint15"
+        },
+        {
+            "name": "SpawnPoint16",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.20687,
+                "y": 0,
+                "z": 0.978368
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.978368,
+                "y": 0,
+                "z": 0.20687
+            },
+            "position": {
+                "x": 369.25136,
+                "y": 66.46363,
+                "z": 113.2777
+            },
+            "id": "TEAM_2_HQ/SpawnPoint16"
+        },
+        {
+            "name": "TEAM_1_HQ",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 1,
+            "InfantrySpawns": [
+                "TEAM_1_HQ/SpawnPoint",
+                "TEAM_1_HQ/SpawnPoint2",
+                "TEAM_1_HQ/SpawnPoint3",
+                "TEAM_1_HQ/SpawnPoint4",
+                "TEAM_1_HQ/SpawnPoint5",
+                "TEAM_1_HQ/SpawnPoint6",
+                "TEAM_1_HQ/SpawnPoint7",
+                "TEAM_1_HQ/SpawnPoint8",
+                "TEAM_1_HQ/SpawnPoint9",
+                "TEAM_1_HQ/SpawnPoint10",
+                "TEAM_1_HQ/SpawnPoint11",
+                "TEAM_1_HQ/SpawnPoint12",
+                "TEAM_1_HQ/SpawnPoint13",
+                "TEAM_1_HQ/SpawnPoint14",
+                "TEAM_1_HQ/SpawnPoint15",
+                "TEAM_1_HQ/SpawnPoint16"
+            ],
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 287.81,
+                "y": 64.5062,
+                "z": 91.8563
+            },
+            "id": "TEAM_1_HQ",
+            "linked": [
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 291.42264,
+                "y": 66.28981,
+                "z": 106.8578
+            },
+            "id": "TEAM_1_HQ/SpawnPoint"
+        },
+        {
+            "name": "SpawnPoint2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 297.47528,
+                "y": 63.976278,
+                "z": 108.101
+            },
+            "id": "TEAM_1_HQ/SpawnPoint2"
+        },
+        {
+            "name": "SpawnPoint3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.793173,
+                "y": 0,
+                "z": -0.608997
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.608997,
+                "y": 0,
+                "z": -0.793173
+            },
+            "position": {
+                "x": 291.11237,
+                "y": 64.5279209,
+                "z": 84.92477
+            },
+            "id": "TEAM_1_HQ/SpawnPoint3"
+        },
+        {
+            "name": "SpawnPoint4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.115891,
+                "y": 0,
+                "z": -0.993262
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.993262,
+                "y": 0,
+                "z": 0.115891
+            },
+            "position": {
+                "x": 279.81989,
+                "y": 66.584,
+                "z": 89.07655
+            },
+            "id": "TEAM_1_HQ/SpawnPoint4"
+        },
+        {
+            "name": "SpawnPoint5",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.000349089,
+                "y": 0,
+                "z": -1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 1,
+                "y": 0,
+                "z": -0.000349089
+            },
+            "position": {
+                "x": 279.75592,
+                "y": 66.55022,
+                "z": 94.72372
+            },
+            "id": "TEAM_1_HQ/SpawnPoint5"
+        },
+        {
+            "name": "SpawnPoint6",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.536195,
+                "y": 0,
+                "z": -0.844094
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.844094,
+                "y": 0,
+                "z": -0.536195
+            },
+            "position": {
+                "x": 286.58448,
+                "y": 64.5300495,
+                "z": 86.75119
+            },
+            "id": "TEAM_1_HQ/SpawnPoint6"
+        },
+        {
+            "name": "SpawnPoint7",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.750192,
+                "y": 0,
+                "z": -0.66122
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.66122,
+                "y": 0,
+                "z": 0.750192
+            },
+            "position": {
+                "x": 288.214846,
+                "y": 64.5306675,
+                "z": 93.59639
+            },
+            "id": "TEAM_1_HQ/SpawnPoint7"
+        },
+        {
+            "name": "SpawnPoint8",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.764246,
+                "y": 0,
+                "z": -0.644924
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.644924,
+                "y": 0,
+                "z": -0.764246
+            },
+            "position": {
+                "x": 295.06507,
+                "y": 61.02834,
+                "z": 89.00781
+            },
+            "id": "TEAM_1_HQ/SpawnPoint8"
+        },
+        {
+            "name": "SpawnPoint9",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.687252,
+                "y": 0,
+                "z": -0.726419
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.726419,
+                "y": 0,
+                "z": -0.687252
+            },
+            "position": {
+                "x": 297.30686,
+                "y": 61.04965,
+                "z": 81.97736
+            },
+            "id": "TEAM_1_HQ/SpawnPoint9"
+        },
+        {
+            "name": "SpawnPoint10",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.955454,
+                "y": 0,
+                "z": -0.295141
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.295141,
+                "y": 0,
+                "z": -0.955454
+            },
+            "position": {
+                "x": 300.2856,
+                "y": 64.5932895,
+                "z": 91.379745
+            },
+            "id": "TEAM_1_HQ/SpawnPoint10"
+        },
+        {
+            "name": "SpawnPoint11",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.986124,
+                "y": 0,
+                "z": -0.166011
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.166011,
+                "y": 0,
+                "z": 0.986124
+            },
+            "position": {
+                "x": 289.85102,
+                "y": 64.5327198,
+                "z": 99.52305
+            },
+            "id": "TEAM_1_HQ/SpawnPoint11"
+        },
+        {
+            "name": "SpawnPoint12",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.997547,
+                "y": 0,
+                "z": 0.0700002
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.0700002,
+                "y": 0,
+                "z": 0.997547
+            },
+            "position": {
+                "x": 296.22589,
+                "y": 62.4466,
+                "z": 103.5104
+            },
+            "id": "TEAM_1_HQ/SpawnPoint12"
+        },
+        {
+            "name": "SpawnPoint13",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.868787,
+                "y": 0,
+                "z": -0.495186
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.495186,
+                "y": 0,
+                "z": -0.868787
+            },
+            "position": {
+                "x": 287.301302,
+                "y": 64.5300419,
+                "z": 90.10635
+            },
+            "id": "TEAM_1_HQ/SpawnPoint13"
+        },
+        {
+            "name": "SpawnPoint14",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.938968,
+                "y": 0,
+                "z": 0.344004
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.344004,
+                "y": 0,
+                "z": -0.938968
+            },
+            "position": {
+                "x": 295.40167,
+                "y": 61.03233,
+                "z": 91.999694
+            },
+            "id": "TEAM_1_HQ/SpawnPoint14"
+        },
+        {
+            "name": "SpawnPoint15",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 298.0274,
+                "y": 64.95345,
+                "z": 111.2101
+            },
+            "id": "TEAM_1_HQ/SpawnPoint15"
+        },
+        {
+            "name": "SpawnPoint16",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 293.28171,
+                "y": 66.28972,
+                "z": 110.0343
+            },
+            "id": "TEAM_1_HQ/SpawnPoint16"
+        },
+        {
+            "name": "CombatArea",
+            "CombatVolume": "CombatArea/CollisionPolygon3D",
+            "type": "CombatArea",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 283.651,
+                "y": -87.4792,
+                "z": 133.42
+            },
+            "id": "CombatArea",
+            "linked": [
+                "CombatVolume"
+            ]
+        },
+        {
+            "name": "CollisionPolygon3D",
+            "type": "PolygonVolume",
+            "id": "CombatArea/CollisionPolygon3D",
+            "height": 100,
+            "points": [
+                {
+                    "x": 300.475,
+                    "y": 46.9018,
+                    "z": 46.614
+                },
+                {
+                    "x": 287.088,
+                    "y": 46.9018,
+                    "z": 49.5697
+                },
+                {
+                    "x": 287.783,
+                    "y": 46.9018,
+                    "z": 62.2633
+                },
+                {
+                    "x": 294.042,
+                    "y": 46.9018,
+                    "z": 62.1764
+                },
+                {
+                    "x": 283.16,
+                    "y": 46.9018,
+                    "z": 78.9654
+                },
+                {
+                    "x": 271.076,
+                    "y": 46.9018,
+                    "z": 81.3785
+                },
+                {
+                    "x": 270.294,
+                    "y": 46.9018,
+                    "z": 93.2885
+                },
+                {
+                    "x": 261.276,
+                    "y": 46.9018,
+                    "z": 89.5421
+                },
+                {
+                    "x": 254.211,
+                    "y": 46.9018,
+                    "z": 107.6325
+                },
+                {
+                    "x": 265.747,
+                    "y": 46.9018,
+                    "z": 112.2548
+                },
+                {
+                    "x": 270.477,
+                    "y": 46.9018,
+                    "z": 121.7165
+                },
+                {
+                    "x": 263.501,
+                    "y": 46.9018,
+                    "z": 125.1652
+                },
+                {
+                    "x": 267.067,
+                    "y": 46.9018,
+                    "z": 132.2971
+                },
+                {
+                    "x": 278.628,
+                    "y": 46.9018,
+                    "z": 155.779
+                },
+                {
+                    "x": 292.966,
+                    "y": 46.9018,
+                    "z": 152.155
+                },
+                {
+                    "x": 291.691,
+                    "y": 46.9018,
+                    "z": 144.548
+                },
+                {
+                    "x": 300.891,
+                    "y": 46.9018,
+                    "z": 141.92
+                },
+                {
+                    "x": 301.17,
+                    "y": 46.9018,
+                    "z": 158.169
+                },
+                {
+                    "x": 314.3693,
+                    "y": 46.9018,
+                    "z": 157.924
+                },
+                {
+                    "x": 313.9312,
+                    "y": 46.9018,
+                    "z": 142.112
+                },
+                {
+                    "x": 316.0059,
+                    "y": 46.9018,
+                    "z": 142.156
+                },
+                {
+                    "x": 348.7832,
+                    "y": 46.9018,
+                    "z": 142.395
+                },
+                {
+                    "x": 357.2264,
+                    "y": 46.9018,
+                    "z": 147.333
+                },
+                {
+                    "x": 369.8913,
+                    "y": 46.9018,
+                    "z": 149.364
+                },
+                {
+                    "x": 370.6479,
+                    "y": 46.9018,
+                    "z": 145.581
+                },
+                {
+                    "x": 375.618,
+                    "y": 46.9018,
+                    "z": 144.184
+                },
+                {
+                    "x": 382.254,
+                    "y": 46.9018,
+                    "z": 138.18
+                },
+                {
+                    "x": 383.3916,
+                    "y": 46.9018,
+                    "z": 140.266
+                },
+                {
+                    "x": 394.7815,
+                    "y": 46.9018,
+                    "z": 135.051
+                },
+                {
+                    "x": 392.4647,
+                    "y": 46.9018,
+                    "z": 127.6977
+                },
+                {
+                    "x": 390.3141,
+                    "y": 46.9018,
+                    "z": 122.4406
+                },
+                {
+                    "x": 397.5227,
+                    "y": 46.9018,
+                    "z": 119.135
+                },
+                {
+                    "x": 394.3514,
+                    "y": 46.9018,
+                    "z": 109.3264
+                },
+                {
+                    "x": 421.30178,
+                    "y": 46.9018,
+                    "z": 89.8662
+                },
+                {
+                    "x": 415.1516,
+                    "y": 46.9018,
+                    "z": 79.5765
+                },
+                {
+                    "x": 409.82933,
+                    "y": 46.9018,
+                    "z": 82.415
+                },
+                {
+                    "x": 406.75426,
+                    "y": 46.9018,
+                    "z": 77.4476
+                },
+                {
+                    "x": 400.0127,
+                    "y": 46.9018,
+                    "z": 81.942
+                },
+                {
+                    "x": 397.6473,
+                    "y": 46.9018,
+                    "z": 78.3938
+                },
+                {
+                    "x": 394.3356,
+                    "y": 46.9018,
+                    "z": 80.4044
+                },
+                {
+                    "x": 388.6926,
+                    "y": 46.9018,
+                    "z": 66.8696
+                },
+                {
+                    "x": 374.145,
+                    "y": 46.9018,
+                    "z": 47.1181
+                },
+                {
+                    "x": 364.6832,
+                    "y": 46.9018,
+                    "z": 55.0423
+                },
+                {
+                    "x": 361.7264,
+                    "y": 46.9018,
+                    "z": 55.3972
+                },
+                {
+                    "x": 362.6726,
+                    "y": 46.9018,
+                    "z": 46.0536
+                },
+                {
+                    "x": 354.929,
+                    "y": 46.9018,
+                    "z": 45.7287
+                },
+                {
+                    "x": 339.332,
+                    "y": 46.9018,
+                    "z": 45.5141
+                },
+                {
+                    "x": 308.158,
+                    "y": 46.9018,
+                    "z": 45.7558
+                }
+            ]
+        },
+        {
+            "name": "ChairFolding_01_A",
+            "ObjId": 9001,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 401.305,
+                "y": 64.1062,
+                "z": 88.0262
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A"
+        },
+        {
+            "name": "ChairFolding_01_A2",
+            "ObjId": 9002,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 392.817,
+                "y": 64.4062,
+                "z": 91.0141
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A2"
+        },
+        {
+            "name": "ChairFolding_01_A3",
+            "ObjId": 9003,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 390.164,
+                "y": 65.5595,
+                "z": 99.6027
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A3"
+        },
+        {
+            "name": "ChairFolding_01_A4",
+            "ObjId": 9004,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 385.499,
+                "y": 62.6814,
+                "z": 85.8789
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A4"
+        },
+        {
+            "name": "ChairFolding_01_A5",
+            "ObjId": 9005,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 380.346,
+                "y": 62.6814,
+                "z": 69.4515
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A5"
+        },
+        {
+            "name": "ChairFolding_01_A6",
+            "ObjId": 9006,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 376.986,
+                "y": 63.0204,
+                "z": 57.3316
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A6"
+        },
+        {
+            "name": "ChairFolding_01_A7",
+            "ObjId": 9007,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 329.309,
+                "y": 64.813,
+                "z": 66.3936
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A7"
+        },
+        {
+            "name": "ChairFolding_01_A8",
+            "ObjId": 9008,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 318.461,
+                "y": 62.3883,
+                "z": 68.5987
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A8"
+        },
+        {
+            "name": "ChairFolding_01_A9",
+            "ObjId": 9009,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 298.595,
+                "y": 60.4734,
+                "z": 59.3658
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A9"
+        },
+        {
+            "name": "ChairFolding_01_A10",
+            "ObjId": 9010,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 298.237,
+                "y": 60.4734,
+                "z": 69.0743
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A10"
+        },
+        {
+            "name": "ChairFolding_01_A11",
+            "ObjId": 9011,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 307.05,
+                "y": 60.4734,
+                "z": 66.8081
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A11"
+        },
+        {
+            "name": "ChairFolding_01_A12",
+            "ObjId": 9012,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 298.478,
+                "y": 61.0038,
+                "z": 80.302
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A12"
+        },
+        {
+            "name": "ChairFolding_01_A13",
+            "ObjId": 9013,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 288.906,
+                "y": 64.5075,
+                "z": 90.2799
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A13"
+        },
+        {
+            "name": "ChairFolding_01_A14",
+            "ObjId": 9014,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 302.079,
+                "y": 64.5242,
+                "z": 93.1007
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A14"
+        },
+        {
+            "name": "ChairFolding_01_A15",
+            "ObjId": 9015,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 279.526,
+                "y": 66.5205,
+                "z": 92.4095
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A15"
+        },
+        {
+            "name": "ChairFolding_01_A16",
+            "ObjId": 9016,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 275.088,
+                "y": 67.4744,
+                "z": 104.053
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A16"
+        },
+        {
+            "name": "ChairFolding_01_A17",
+            "ObjId": 9017,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 280.366,
+                "y": 68.1164,
+                "z": 115.478
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A17"
+        },
+        {
+            "name": "ChairFolding_01_A18",
+            "ObjId": 9018,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 294.643,
+                "y": 70.0031,
+                "z": 139.104
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A18"
+        },
+        {
+            "name": "ChairFolding_01_A19",
+            "ObjId": 9019,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 327.835,
+                "y": 69.4354,
+                "z": 136.305
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A19"
+        },
+        {
+            "name": "ChairFolding_01_A20",
+            "ObjId": 9020,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 357.583,
+                "y": 68.9982,
+                "z": 139.195
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A20"
+        },
+        {
+            "name": "ChairFolding_01_A21",
+            "ObjId": 9021,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 373.1,
+                "y": 68.8762,
+                "z": 139.545
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A21"
+        },
+        {
+            "name": "ChairFolding_01_A22",
+            "ObjId": 9022,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 384.378,
+                "y": 68.9284,
+                "z": 127.142
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A22"
+        },
+        {
+            "name": "ChairFolding_01_A23",
+            "ObjId": 9023,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 373.719,
+                "y": 66.5241,
+                "z": 113.723
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A23"
+        },
+        {
+            "name": "ChairFolding_01_A24",
+            "ObjId": 9024,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 368.36,
+                "y": 64.5602,
+                "z": 100.378
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A24"
+        },
+        {
+            "name": "ChairFolding_01_A25",
+            "ObjId": 9025,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 369.032,
+                "y": 62.6814,
+                "z": 80.266
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A25"
+        },
+        {
+            "name": "ChairFolding_01_A26",
+            "ObjId": 9026,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 353.385,
+                "y": 64.8435,
+                "z": 96.8408
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A26"
+        },
+        {
+            "name": "ChairFolding_01_A27",
+            "ObjId": 9027,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 343.595,
+                "y": 65.7369,
+                "z": 101.249
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A27"
+        },
+        {
+            "name": "ChairFolding_01_A28",
+            "ObjId": 9028,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 324.462,
+                "y": 65.5524,
+                "z": 92.8333
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A28"
+        },
+        {
+            "name": "ChairFolding_01_A29",
+            "ObjId": 9029,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 316.769,
+                "y": 65.741,
+                "z": 111.626
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A29"
+        },
+        {
+            "name": "ChairFolding_01_A30",
+            "ObjId": 9030,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 328.411,
+                "y": 65.741,
+                "z": 109.848
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A30"
+        },
+        {
+            "name": "ChairFolding_01_A31",
+            "ObjId": 9031,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 325.193,
+                "y": 68.6727,
+                "z": 123.432
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A31"
+        },
+        {
+            "name": "ChairFolding_01_A32",
+            "ObjId": 9032,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 305.065,
+                "y": 66.2382,
+                "z": 114.828
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A32"
+        },
+        {
+            "name": "ChairFolding_01_A33",
+            "ObjId": 9033,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 297.027,
+                "y": 67.9425,
+                "z": 124.773
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A33"
+        },
+        {
+            "name": "ChairFolding_01_A34",
+            "ObjId": 9034,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 353.494,
+                "y": 63.1849,
+                "z": 63.2648
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A34"
+        },
+        {
+            "name": "ChairFolding_01_A35",
+            "ObjId": 9035,
+            "type": "ChairFolding_01_A",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 338.736,
+                "y": 65.741,
+                "z": 119.235
+            },
+            "id": "GameInProgressSpawner/ChairFolding_01_A35"
+        }
+    ],
+    "Static": [
+        {
+            "name": "MP_Limestone_Terrain",
+            "type": "MP_Limestone_Terrain",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Limestone_Terrain"
+        },
+        {
+            "name": "MP_Limestone_Assets",
+            "type": "MP_Limestone_Assets",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Limestone_Assets"
+        }
+    ]
+}

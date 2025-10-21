@@ -1,0 +1,313 @@
+[gd_scene load_steps=11 format=3 uid="uid://d0dkemsqqkwly"]
+
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_4gqfe"]
+[ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_cjtf1"]
+[ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_ggxu6"]
+[ext_resource type="PackedScene" path="res://static/MP_Limestone_Terrain.tscn" id="4_gb1dn"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_owl2c"]
+[ext_resource type="PackedScene" path="res://static/MP_Limestone_Assets.tscn" id="5_owl2c"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="7_pa1ei"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/AreaTrigger.tscn" id="8_hc05k"]
+[ext_resource type="Script" uid="uid://ck5uniw0pl6u8" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.gd" id="9_dpage"]
+[ext_resource type="PackedScene" path="res://objects/Shared/Generic/Common/Props/ChairFolding_01_A.tscn" id="11_xe48y"]
+
+[node name="MP_Limestone" type="Node3D"]
+
+[node name="DeployCam" parent="." instance=ExtResource("7_pa1ei")]
+transform = Transform3D(1, 0, 4.37114e-08, -4.37114e-08, 1.91069e-15, 1, 0, -1, 1.91069e-15, 331, 165, 93)
+ObjId = 444
+
+[node name="GAMESTARTED_HQS" type="Node3D" parent="."]
+transform = Transform3D(0.999941, 0, 0.0108906, 0, 1, 0, -0.0108906, 0, 0.999941, 332.296, 79.0111, 28.3832)
+
+[node name="TEAM_1_HQ_GAMESTARTED" parent="GAMESTARTED_HQS" instance=ExtResource("1_4gqfe")]
+ObjId = 11
+
+[node name="TEAM_2_HQ_GAMESTARTED" parent="GAMESTARTED_HQS" instance=ExtResource("1_4gqfe")]
+Team = 2
+AltTeam = 1
+ObjId = 12
+
+[node name="AreaTrigger" parent="GAMESTARTED_HQS" node_paths=PackedStringArray("Area") instance=ExtResource("8_hc05k")]
+ObjId = 1000
+Area = NodePath("PolygonVolume")
+
+[node name="PolygonVolume" type="Node3D" parent="GAMESTARTED_HQS/AreaTrigger"]
+script = ExtResource("9_dpage")
+points = PackedVector2Array(-1.56073, -1.54599, -1.63623, 1.58917, 1.48193, 1.56259, 1.60538, -1.43287)
+color = Color(0, 0.6, 0.7, 0.42)
+metadata/_custom_type_script = "uid://ck5uniw0pl6u8"
+
+[node name="TEAM_2_HQ" parent="." node_paths=PackedStringArray("InfantrySpawns") instance=ExtResource("1_4gqfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 371.092, 64.3295, 96.0368)
+Team = 2
+AltTeam = 0
+ObjId = 2
+InfantrySpawns = [NodePath("SpawnPoint"), NodePath("SpawnPoint2"), NodePath("SpawnPoint3"), NodePath("SpawnPoint4"), NodePath("SpawnPoint5"), NodePath("SpawnPoint6"), NodePath("SpawnPoint7"), NodePath("SpawnPoint8"), NodePath("SpawnPoint9"), NodePath("SpawnPoint10"), NodePath("SpawnPoint11"), NodePath("SpawnPoint12"), NodePath("SpawnPoint13"), NodePath("SpawnPoint14"), NodePath("SpawnPoint15"), NodePath("SpawnPoint16")]
+
+[node name="SpawnPoint" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.481494, 0, -0.87645, 0, 1, 0, 0.87645, 0, 0.481494, 8.51373, 2.2251, 12.7259)
+ObjId = 447
+
+[node name="SpawnPoint2" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.910785, 0, -0.412882, 0, 1, 0, 0.412882, 0, 0.910785, -1.39227, 0.422562, 11.9822)
+ObjId = 2
+
+[node name="SpawnPoint3" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.448836, 0, -0.893614, 0, 1, 0, 0.893614, 0, 0.448836, 5.33679, 0.020607, -3.18123)
+ObjId = 3
+
+[node name="SpawnPoint4" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.427815, 0, -0.903866, 0, 1, 0, 0.903866, 0, 0.427815, 12.6099, 2.21964, 8.90088)
+ObjId = 4
+
+[node name="SpawnPoint5" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.383619, 0, -0.923492, 0, 1, 0, 0.923492, 0, 0.383619, -9.37762, -1.62425, -8.79278)
+ObjId = 5
+
+[node name="SpawnPoint6" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.717665, 0, -0.696389, 0, 1, 0, 0.696389, 0, 0.717665, -0.146484, -1.62425, -15.5552)
+
+[node name="SpawnPoint7" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.57609, 0, -0.817386, 0, 1, 0, 0.817386, 0, 0.57609, -4.66461, -1.62425, -12.2616)
+
+[node name="SpawnPoint8" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.591267, 0, -0.806476, 0, 1, 0, 0.806476, 0, 0.591267, 3.49991, -0.543243, -8.82267)
+
+[node name="SpawnPoint9" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(-0.133865, 0, -0.991, 0, 1, 0, 0.991, 0, -0.133865, -1.86227, -0.486572, -4.36153)
+
+[node name="SpawnPoint10" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.117919, 0, -0.993023, 0, 1, 0, 0.993023, 0, 0.117919, 3.02173, 2.2504, 15.8299)
+
+[node name="SpawnPoint11" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75546, 0.115723, 2.20506)
+
+[node name="SpawnPoint12" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.99982, 0, 0.0189706, 0, 1, 0, -0.0189706, 0, 0.99982, -4.07709, 0.459839, 7.02502)
+
+[node name="SpawnPoint13" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38669, 0.207497, 0.953041)
+
+[node name="SpawnPoint14" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.225631, 0, -0.974213, 0, 1, 0, 0.974213, 0, 0.225631, -2.5387, -1.62425, -14.4678)
+
+[node name="SpawnPoint15" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.605141, 0, -0.796118, 0, 1, 0, 0.796118, 0, 0.605141, -6.73416, -1.62425, -10.43)
+
+[node name="SpawnPoint16" parent="TEAM_2_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.20687, 0, -0.978368, 0, 1, 0, 0.978368, 0, 0.20687, -1.84064, 2.13413, 17.2409)
+
+[node name="TEAM_1_HQ" parent="." node_paths=PackedStringArray("InfantrySpawns") instance=ExtResource("1_4gqfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 287.81, 64.5062, 91.8563)
+AltTeam = 0
+ObjId = 1
+InfantrySpawns = [NodePath("SpawnPoint"), NodePath("SpawnPoint2"), NodePath("SpawnPoint3"), NodePath("SpawnPoint4"), NodePath("SpawnPoint5"), NodePath("SpawnPoint6"), NodePath("SpawnPoint7"), NodePath("SpawnPoint8"), NodePath("SpawnPoint9"), NodePath("SpawnPoint10"), NodePath("SpawnPoint11"), NodePath("SpawnPoint12"), NodePath("SpawnPoint13"), NodePath("SpawnPoint14"), NodePath("SpawnPoint15"), NodePath("SpawnPoint16")]
+
+[node name="SpawnPoint" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.61264, 1.78361, 15.0015)
+
+[node name="SpawnPoint2" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.66528, -0.529922, 16.2447)
+
+[node name="SpawnPoint3" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(-0.793173, 0, 0.608997, 0, 1, 0, -0.608997, 0, -0.793173, 3.30237, 0.0217209, -6.93153)
+
+[node name="SpawnPoint4" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.115891, 0, 0.993262, 0, 1, 0, -0.993262, 0, 0.115891, -7.99011, 2.0778, -2.77975)
+
+[node name="SpawnPoint5" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(-0.000349089, 0, 1, 0, 1, 0, -1, 0, -0.000349089, -8.05408, 2.04402, 2.86742)
+
+[node name="SpawnPoint6" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(-0.536195, 0, 0.844094, 0, 1, 0, -0.844094, 0, -0.536195, -1.22552, 0.0238495, -5.10511)
+
+[node name="SpawnPoint7" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.750192, 0, 0.66122, 0, 1, 0, -0.66122, 0, 0.750192, 0.404846, 0.0244675, 1.74009)
+
+[node name="SpawnPoint8" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(-0.764246, 0, 0.644924, 0, 1, 0, -0.644924, 0, -0.764246, 7.25507, -3.47786, -2.84849)
+
+[node name="SpawnPoint9" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(-0.687252, 0, 0.726419, 0, 1, 0, -0.726419, 0, -0.687252, 9.49686, -3.45655, -9.87894)
+
+[node name="SpawnPoint10" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(-0.955454, 0, 0.295141, 0, 1, 0, -0.295141, 0, -0.955454, 12.4756, 0.0870895, -0.476555)
+
+[node name="SpawnPoint11" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.986124, 0, 0.166011, 0, 1, 0, -0.166011, 0, 0.986124, 2.04102, 0.0265198, 7.66675)
+
+[node name="SpawnPoint12" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(0.997547, 0, -0.0700002, 0, 1, 0, 0.0700002, 0, 0.997547, 8.41589, -2.0596, 11.6541)
+
+[node name="SpawnPoint13" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(-0.868787, 0, 0.495186, 0, 1, 0, -0.495186, 0, -0.868787, -0.508698, 0.0238419, -1.74995)
+
+[node name="SpawnPoint14" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(-0.938968, 0, -0.344004, 0, 1, 0, 0.344004, 0, -0.938968, 7.59167, -3.47387, 0.143394)
+
+[node name="SpawnPoint15" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2174, 0.44725, 19.3538)
+
+[node name="SpawnPoint16" parent="TEAM_1_HQ" instance=ExtResource("3_ggxu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.47171, 1.78352, 18.178)
+
+[node name="CombatArea" parent="." node_paths=PackedStringArray("CombatVolume") instance=ExtResource("4_owl2c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.651, -87.4792, 133.42)
+CombatVolume = NodePath("CollisionPolygon3D")
+
+[node name="CollisionPolygon3D" parent="CombatArea" instance=ExtResource("2_cjtf1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.825, 134.381, -100.438)
+points = PackedVector2Array(-113.001, 13.632, -126.388, 16.5877, -125.693, 29.2813, -119.434, 29.1944, -130.316, 45.9834, -142.4, 48.3965, -143.182, 60.3065, -152.2, 56.5601, -159.265, 74.6505, -147.729, 79.2728, -142.999, 88.7345, -149.975, 92.1832, -146.409, 99.3151, -134.848, 122.797, -120.51, 119.173, -121.785, 111.566, -112.585, 108.938, -112.306, 125.187, -99.1067, 124.942, -99.5448, 109.13, -97.4701, 109.174, -64.6928, 109.413, -56.2496, 114.351, -43.5847, 116.382, -42.8281, 112.599, -37.858, 111.202, -31.222, 105.198, -30.0844, 107.284, -18.6945, 102.069, -21.0113, 94.7157, -23.1619, 89.4586, -15.9533, 86.153, -19.1246, 76.3444, 7.82578, 56.8842, 1.6756, 46.5945, -3.64667, 49.433, -6.72174, 44.4656, -13.4633, 48.96, -15.8287, 45.4118, -19.1404, 47.4224, -24.7834, 33.8876, -39.331, 14.1361, -48.7928, 22.0603, -51.7496, 22.4152, -50.8034, 13.0716, -58.547, 12.7467, -74.144, 12.5321, -105.318, 12.7738)
+height = 100.0
+
+[node name="Static" type="Node3D" parent="."]
+
+[node name="MP_Limestone_Terrain" parent="Static" instance=ExtResource("4_gb1dn")]
+
+[node name="MP_Limestone_Assets" parent="Static" instance=ExtResource("5_owl2c")]
+
+[node name="GameInProgressSpawner" type="Node3D" parent="."]
+
+[node name="ChairFolding_01_A" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 401.305, 64.1062, 88.0262)
+ObjId = 9001
+
+[node name="ChairFolding_01_A2" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 392.817, 64.4062, 91.0141)
+ObjId = 9002
+
+[node name="ChairFolding_01_A3" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 390.164, 65.5595, 99.6027)
+ObjId = 9003
+
+[node name="ChairFolding_01_A4" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 385.499, 62.6814, 85.8789)
+ObjId = 9004
+
+[node name="ChairFolding_01_A5" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 380.346, 62.6814, 69.4515)
+ObjId = 9005
+
+[node name="ChairFolding_01_A6" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 376.986, 63.0204, 57.3316)
+ObjId = 9006
+
+[node name="ChairFolding_01_A7" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 329.309, 64.813, 66.3936)
+ObjId = 9007
+
+[node name="ChairFolding_01_A8" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318.461, 62.3883, 68.5987)
+ObjId = 9008
+
+[node name="ChairFolding_01_A9" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 298.595, 60.4734, 59.3658)
+ObjId = 9009
+
+[node name="ChairFolding_01_A10" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 298.237, 60.4734, 69.0743)
+ObjId = 9010
+
+[node name="ChairFolding_01_A11" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 307.05, 60.4734, 66.8081)
+ObjId = 9011
+
+[node name="ChairFolding_01_A12" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 298.478, 61.0038, 80.302)
+ObjId = 9012
+
+[node name="ChairFolding_01_A13" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 288.906, 64.5075, 90.2799)
+ObjId = 9013
+
+[node name="ChairFolding_01_A14" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 302.079, 64.5242, 93.1007)
+ObjId = 9014
+
+[node name="ChairFolding_01_A15" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 279.526, 66.5205, 92.4095)
+ObjId = 9015
+
+[node name="ChairFolding_01_A16" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 275.088, 67.4744, 104.053)
+ObjId = 9016
+
+[node name="ChairFolding_01_A17" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 280.366, 68.1164, 115.478)
+ObjId = 9017
+
+[node name="ChairFolding_01_A18" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.643, 70.0031, 139.104)
+ObjId = 9018
+
+[node name="ChairFolding_01_A19" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 327.835, 69.4354, 136.305)
+ObjId = 9019
+
+[node name="ChairFolding_01_A20" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 357.583, 68.9982, 139.195)
+ObjId = 9020
+
+[node name="ChairFolding_01_A21" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 373.1, 68.8762, 139.545)
+ObjId = 9021
+
+[node name="ChairFolding_01_A22" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 384.378, 68.9284, 127.142)
+ObjId = 9022
+
+[node name="ChairFolding_01_A23" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 373.719, 66.5241, 113.723)
+ObjId = 9023
+
+[node name="ChairFolding_01_A24" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 368.36, 64.5602, 100.378)
+ObjId = 9024
+
+[node name="ChairFolding_01_A25" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 369.032, 62.6814, 80.266)
+ObjId = 9025
+
+[node name="ChairFolding_01_A26" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 353.385, 64.8435, 96.8408)
+ObjId = 9026
+
+[node name="ChairFolding_01_A27" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.595, 65.7369, 101.249)
+ObjId = 9027
+
+[node name="ChairFolding_01_A28" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 324.462, 65.5524, 92.8333)
+ObjId = 9028
+
+[node name="ChairFolding_01_A29" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 316.769, 65.741, 111.626)
+ObjId = 9029
+
+[node name="ChairFolding_01_A30" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 328.411, 65.741, 109.848)
+ObjId = 9030
+
+[node name="ChairFolding_01_A31" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 325.193, 68.6727, 123.432)
+ObjId = 9031
+
+[node name="ChairFolding_01_A32" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 305.065, 66.2382, 114.828)
+ObjId = 9032
+
+[node name="ChairFolding_01_A33" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 297.027, 67.9425, 124.773)
+ObjId = 9033
+
+[node name="ChairFolding_01_A34" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 353.494, 63.1849, 63.2648)
+ObjId = 9034
+
+[node name="ChairFolding_01_A35" parent="GameInProgressSpawner" instance=ExtResource("11_xe48y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.736, 65.741, 119.235)
+ObjId = 9035
+
+[editable path="Static/MP_Limestone_Terrain"]
+[editable path="Static/MP_Limestone_Terrain/Mesh"]
