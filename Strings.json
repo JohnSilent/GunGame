@@ -1,8 +1,8 @@
 {
   "scoreboard": {
-    "header": "Gun Master",
+    "header": "Gun Game",
     "LVL": "LVL",
-    "KillsInLvl" : "K/LVL",
+    "KillsInLvl" : "K@LVL",
     "Kills": "K",
     "Deaths": "D"
   }

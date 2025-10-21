@@ -1,13 +1,12 @@
 // To be implemented: 
-// 1) Randomize weapon list at start of game, depending on numberOfWeapons.
-// 2) Kill with melee weapon steals a level from killed enemy and a hole level 
-// 3) Add messages for Start, Taken the lead, Knifed, Close to winning, Win
-// 4) Automatic Spawn at the Spawnpoint furthest away from enemies 
-// 5) Add Scoreboard showing Level, Kills, Deaths 
-// 6) Add UI to display current level, weapon and kills needed to level up, next weapon 
-// 7) Add sound effects for leveling up and winning
-
-
+// - Kill with melee weapon steals a level from killed enemy and a hole level 
+//      ToDo: Implemented but not tested yet. 
+// - Add messages for Start, Taken the lead, Knifed, Close to winning, Win
+// - Randomize weapon list at start of game, depending on numberOfWeapons.
+// - Automatic Spawn at the Spawnpoint furthest away from enemies 
+// - Add Basic Scoreboard showing Level, Kills, Deaths 
+// - Add UI to display current level, weapon and kills needed to level up, next weapon 
+// - Add sound effects for leveling up and winning
 
 
 /* Types */
@@ -81,6 +80,7 @@ class JsPlayer {
 
     private adjustLevel(adjustment: number){
         this.level = this.level + adjustment;
+        scoreboard?.update(this);
         if (debugJSPlayer) console.log("adjustLevel: Adjusted Level of", this.playerId, "to", this.level);
 
     }
@@ -246,6 +246,33 @@ const StandardGunGame: GunGameSet = {
 }
 
 
+class Scoreboard {
+    //leadingPlayer: JsPlayer | null = null;
+    constructor() {
+        mod.SetScoreboardType(mod.ScoreboardType.CustomFFA);
+        mod.SetScoreboardHeader(mod.Message(mod.stringkeys.scoreboard.header));
+        mod.SetScoreboardColumnNames(
+            mod.Message(mod.stringkeys.scoreboard.LVL),
+            mod.Message(mod.stringkeys.scoreboard.KillsInLvl),
+            mod.Message(mod.stringkeys.scoreboard.Kills),
+            mod.Message(mod.stringkeys.scoreboard.Deaths)
+        );
+        mod.SetScoreboardColumnWidths(40, 40, 40, 40);
+        }
+    public update(jsPlayer: JsPlayer){
+        mod.SetScoreboardPlayerValues(jsPlayer.player, jsPlayer.level, jsPlayer.killsInLevel, jsPlayer.kills, jsPlayer.deaths);
+        mod.SetGameModeScore(jsPlayer.player, jsPlayer.level);
+    }
+
+    public initializeOnGameStart(){
+        JsPlayer.jsPlayerInstances.forEach(player => {
+            this.update(player);
+        });
+    }
+}
+
+
+
 function CheckCorrectPlayerWeaponEquipped(jsPlayer: JsPlayer): boolean {
     if (!jsPlayer.IsDeployed || mod.GetMatchTimeElapsed() - jsPlayer.LastDeployTime < 2)
         return true;
@@ -262,11 +289,12 @@ function CheckCorrectPlayerWeaponEquipped(jsPlayer: JsPlayer): boolean {
 
 // Settings
 
-const VERSION = [0, 2, 1];
+const VERSION = [0, 2, 2];
 const debugJSPlayer = true;
-let maxLevel = 2; 
+let maxLevel = 3; 
 let GameEnded: boolean = false;  
 let CurrentGunGameSet: GunGameSet = StandardGunGame;
+let scoreboard: Scoreboard | null = null;
 
 
 // -------------------------------
@@ -279,6 +307,7 @@ export async function OnPlayerJoinGame(player: mod.Player) {
     if (!jsPlayer)
         return;
     mod.DisplayNotificationMessage(mod.Message("Welcome"), player);
+    scoreboard?.update(jsPlayer);
 }
 
 export function OnPlayerDeployed(eventPlayer: mod.Player): void {
@@ -316,14 +345,13 @@ export async function OnPlayerEarnedKill(eventPlayer: mod.Player, eventOtherPlay
                 jsOtherPlayer.demote(); 
         }
     }
+    scoreboard?.update(jsPlayer);
 }
 
 export async function OnPlayerDied(eventPlayer: mod.Player, eventOtherPlayer: mod.Player, eventDeathType: mod.DeathType, eventWeaponUnlock: mod.WeaponUnlock) {
     let jsPlayer = JsPlayer.get(eventPlayer);
     if (!jsPlayer)
         return;
-
-    jsPlayer.IsDeployed = false;
     jsPlayer.deaths++;
     await mod.Wait(2);
     if (GameEnded){
@@ -337,7 +365,7 @@ export function OnPlayerUndeploy(eventPlayer: mod.Player){
     if (!jsPlayer)
         return;
     jsPlayer.IsDeployed = false;
-    jsPlayer.deaths++;
+    scoreboard?.update(jsPlayer);
 }
 
 export function OnPlayerLeaveGame(eventNumber: number){
@@ -351,6 +379,8 @@ export function OnPlayerLeaveGame(eventNumber: number){
 }
 
 export async function OnGameModeStarted() {
+    scoreboard = new Scoreboard();
+    scoreboard.initializeOnGameStart();
     mod.SetFriendlyFire(false);
     mod.SetSpawnMode(mod.SpawnModes.Deploy);
     mod.SetGameModeTargetScore(maxLevel+1);
