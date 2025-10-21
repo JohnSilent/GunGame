@@ -314,6 +314,9 @@ function CheckCorrectPlayerWeaponEquipped(jsPlayer: JsPlayer): boolean {
     return correctWeaponEquipped && isCorrectSlotActive;
 }
 
+// -------------------------------
+// Settings
+// -------------------------------
 
 const GAMEMODE_CONFIG: GameModeConfig = {
     maxLevel: 3,
@@ -428,7 +431,6 @@ export async function OnGameModeStarted() {
     mod.SetSpawnMode(mod.SpawnModes.Deploy);
     mod.SetGameModeTargetScore(GAMEMODE_CONFIG.maxLevel+1);
     mod.SetGameModeTimeLimit(10 * 60); // 10 minutes
-    GAMEMODE_CONFIG.GunGameSet = StandardGunGame;
     GameEnded = false;
 }
 
