@@ -272,7 +272,7 @@ let CurrentGunGameSet: GunGameSet = StandardGunGame;
 // -------------------------------
 // EVENTS
 // -------------------------------
-// Triggered when player joins the game. Useful for pregame setup, team management, etc.
+
 export async function OnPlayerJoinGame(player: mod.Player) {
     // State management for new player
     let jsPlayer = JsPlayer.get(player);
@@ -281,7 +281,6 @@ export async function OnPlayerJoinGame(player: mod.Player) {
     mod.DisplayNotificationMessage(mod.Message("Welcome"), player);
 }
 
-// Triggered when player selects their class and deploys into game. Useful for any spawn/start logic.
 export function OnPlayerDeployed(eventPlayer: mod.Player): void {
     let jsPlayer = JsPlayer.get(eventPlayer);
     if (!jsPlayer){
@@ -295,7 +294,6 @@ export function OnPlayerDeployed(eventPlayer: mod.Player): void {
 
 }
 
-// Triggered when player earns a kill. Useful for kill tracking, score management, etc.
 export async function OnPlayerEarnedKill(eventPlayer: mod.Player, eventOtherPlayer: mod.Player, eventDeathType: mod.DeathType, eventWeaponUnlock: mod.WeaponUnlock){
     if (mod.Equals(eventPlayer, eventOtherPlayer))
         return; //Self-Kill
@@ -342,6 +340,15 @@ export function OnPlayerUndeploy(eventPlayer: mod.Player){
     jsPlayer.deaths++;
 }
 
+export function OnPlayerLeaveGame(eventNumber: number){
+    // Clean up disconnected players
+    for (let i = JsPlayer.jsPlayerInstances.length - 1; i >= 0; i--) {
+        const jsp = JsPlayer.jsPlayerInstances[i];
+        if (!mod.IsPlayerValid(jsp.player)) {
+            JsPlayer.jsPlayerInstances.splice(i, 1);
+        }
+    }
+}
 
 export async function OnGameModeStarted() {
     mod.SetFriendlyFire(false);
