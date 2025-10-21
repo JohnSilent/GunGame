@@ -18,6 +18,12 @@ let gameEnded: boolean = false;
 let gameStarted = false;  
 let scoreboard: Scoreboard | null = null;
 const spawners: mod.Vector[] = [];
+let tick = 0;
+// UI Widget IDs
+const UIWIDGET_TIMER_BEGINNING_ID = "UIWidgetTimerBeginning";
+const UIWIDGET_TIMER_BEGINNING_TEXT_ID = "UIWidgetTimerBeginningText";
+const UIWIDGET_SCORE_TIMER_ID = "UIWidgetTimer";
+
 
 interface GameModeConfig {
     maxLevel: number;
@@ -381,6 +387,152 @@ function getFurthestSpawnPointFromEnemies(
 }
 
 // -------------------------------
+// Sound Effects
+// -------------------------------
+
+function playSFX(sfxId: mod.RuntimeSpawn_Common) {
+  const sfx = mod.SpawnObject(
+    sfxId,
+    mod.CreateVector(0, 0, 0),
+    mod.CreateVector(0, 0, 0),
+    mod.CreateVector(0, 0, 0)
+  );
+
+  mod.EnableSFX(sfx, true);
+  mod.PlaySound(sfx, 100);
+}
+
+function playVO(vo: mod.VoiceOverEvents2D, team?: any) {
+  const voModule: mod.VO = mod.SpawnObject(
+    mod.RuntimeSpawn_Common.SFX_VOModule_OneShot2D,
+    mod.CreateVector(0, 0, 0),
+    mod.CreateVector(0, 0, 0)
+  );
+
+  if (team) {
+    mod.PlayVO(voModule, vo, mod.VoiceOverFlags.Alpha, team);
+  } else {
+    mod.PlayVO(voModule, vo, mod.VoiceOverFlags.Alpha);
+  }
+}
+
+// -------------------------------
+// UI
+// -------------------------------
+
+function createBeginningTimer() {
+  mod.AddUIContainer(
+    UIWIDGET_TIMER_BEGINNING_ID,
+    mod.CreateVector(0, -250, 0),
+    mod.CreateVector(400, 200, 0),
+    mod.UIAnchor.Center,
+    mod.GetUIRoot(),
+    true,
+    0,
+    mod.CreateVector(1, 1, 1),
+    0.9,
+    mod.UIBgFill.OutlineThin
+  );
+  const UITimerBeginningContainer = mod.FindUIWidgetWithName(
+    UIWIDGET_TIMER_BEGINNING_ID
+  );
+
+  mod.AddUIText(
+    UIWIDGET_TIMER_BEGINNING_TEXT_ID,
+    mod.CreateVector(0, 0, 0),
+    mod.CreateVector(300, 300, 0),
+    mod.UIAnchor.Center,
+    UITimerBeginningContainer,
+    true,
+    0,
+    mod.CreateVector(0, 0, 0),
+    0,
+    mod.UIBgFill.None,
+    mod.Message(
+      mod.stringkeys.UISCORE_TIMER_BEGINNING,
+      GAMEMODE_CONFIG.freezeTime,
+      0
+    ),
+    120,
+    mod.CreateVector(1, 1, 1),
+    1,
+    mod.UIAnchor.Center
+  );
+}
+
+function updateBeginningTimer(
+  remainingSeconds: number,
+  remainingMilliseconds: number
+) {
+  const timerBeginningWidgetText = mod.FindUIWidgetWithName(
+    UIWIDGET_TIMER_BEGINNING_TEXT_ID
+  );
+
+  if (timerBeginningWidgetText) {
+    const message =
+      remainingSeconds > 5
+        ? mod.Message(mod.stringkeys.UISCORE_TIMER_BEGINNING, remainingSeconds)
+        : mod.Message(
+            mod.stringkeys.UISCORE_TIMER_BEGINNING_MS,
+            remainingSeconds,
+            remainingMilliseconds
+          );
+
+    mod.SetUITextLabel(timerBeginningWidgetText, message);
+  }
+}
+
+function deleteTimerWidget() {
+  const timerBeginningWidget = mod.FindUIWidgetWithName(
+    UIWIDGET_TIMER_BEGINNING_ID
+  );
+  if (timerBeginningWidget) {
+    mod.DeleteUIWidget(timerBeginningWidget);
+  }
+}
+
+function updateTimerText(
+  remainingTime: number,
+  remainingMinutes: number,
+  remainingSeconds: number,
+  remainingMilliseconds: number
+) {
+  const timerWidget = mod.FindUIWidgetWithName(UIWIDGET_SCORE_TIMER_ID);
+  if (timerWidget) {
+    if (remainingTime < 60) {
+      mod.SetUITextColor(timerWidget, mod.CreateVector(0.9, 0, 0));
+      mod.SetUITextLabel(
+        timerWidget,
+        mod.Message(
+          mod.stringkeys.UISCORE_TIMER,
+          remainingSeconds,
+          remainingMilliseconds
+        )
+      );
+
+      if (remainingSeconds <= 20 && tick % 30 === 0) {
+        playSFX(mod.RuntimeSpawn_Common.SFX_Gadgets_C4_Activate_OneShot2D);
+      }
+    } else {
+      if (remainingTime < 120) {
+        mod.SetUITextColor(timerWidget, mod.CreateVector(0.9, 0.9, 0));
+      }
+
+      mod.SetUITextLabel(
+        timerWidget,
+        mod.Message(
+          remainingSeconds >= 10
+            ? mod.stringkeys.UISCORE_TIMER
+            : mod.stringkeys.UISCORE_TIMER_PADDED,
+          remainingMinutes,
+          remainingSeconds
+        )
+      );
+    }
+  }
+}
+
+// -------------------------------
 // Settings
 // -------------------------------
 
@@ -501,9 +653,13 @@ export function OnPlayerEnterAreaTrigger(
 }
 
 export async function OnGameModeStarted() {
+    createSpawnPoints();
+    console.log(spawners.length + " spawn points created.");
+    console.log(spawners[0] + " spawn points created.");    
     gameEnded = false;
     scoreboard = new Scoreboard();
     scoreboard.initializeOnGameStart();
+    createBeginningTimer();
     mod.SetFriendlyFire(false);
     mod.SetSpawnMode(mod.SpawnModes.Deploy);
     mod.SetGameModeTargetScore(GAMEMODE_CONFIG.maxLevel+1);
@@ -517,12 +673,48 @@ export async function OnGameModeStarted() {
 
     mod.EnableHQ(team1HQGameStarted, false);
     mod.EnableHQ(team2HQGameStarted, false);
-    createSpawnPoints();
-    //await mod.Wait(GAMEMODE_CONFIG.freezeTime);
+
+    await mod.Wait(GAMEMODE_CONFIG.freezeTime);
     gameStarted = true;
     mod.EnableHQ(team1HQ, false);
     mod.EnableHQ(team2HQ, false);
     mod.EnableHQ(team1HQGameStarted, true);
     mod.EnableHQ(team2HQGameStarted, true);
+    playVO(mod.VoiceOverEvents2D.RoundStartGeneric);
+    deleteTimerWidget();
 }
 
+// -------------------------------
+// Loop Handlers 
+// -------------------------------
+
+export function OngoingGlobal() {
+  tick++; // ONLY increment tick here
+  const remainingTime = Math.floor(mod.GetMatchTimeRemaining());
+  const remainingMinutes = Math.floor(remainingTime / 60);
+  const remainingSeconds = remainingTime % 60;
+  const remainingMilliseconds = Math.floor(
+    1000 - (tick % 30) * 30 + Math.floor(Math.random() * 10)
+  ); // using ticks because ms aren't updated on remaining time, which is why we also use math.round (ms are static in the fn return so useless)
+
+  if (!gameStarted) {
+    updateBeginningTimer(remainingSeconds, remainingMilliseconds);
+  }
+
+  updateTimerText(
+    remainingTime,
+    remainingMinutes,
+    remainingSeconds,
+    remainingMilliseconds
+  );
+}
+
+export function OngoingPlayer(eventPlayer: mod.Player) {
+  if (!mod.GetSoldierState(eventPlayer, mod.SoldierStateBool.IsDead)) {
+    if (!gameStarted || gameEnded) {
+      mod.EnableAllInputRestrictions(eventPlayer, true);
+    } else {
+      mod.EnableAllInputRestrictions(eventPlayer, false);
+    }
+  }
+}

@@ -1,9 +1,12 @@
 {
   "scoreboard": {
-    "header": "Gun Game",
-    "LVL": "LVL",
-    "KillsInLvl" : "K@LVL",
-    "Kills": "K",
-    "Deaths": "D"
-  }
+  "header": "Gun Game",
+  "LVL": "LVL",
+  "KillsInLvl" : "K@LVL",
+  "Kills": "K",
+  "Deaths": "D"
+  },
+  "UISCORE_TIMER_BEGINNING": "{}",
+  "UISCORE_TIMER_BEGINNING_MS": "{}:{}"
+
 }
