@@ -1,0 +1,9 @@
+{
+  "scoreboard": {
+    "header": "Gun Master",
+    "LVL": "LVL",
+    "KillsInLvl" : "K/LVL",
+    "Kills": "K",
+    "Deaths": "D"
+  }
+}
