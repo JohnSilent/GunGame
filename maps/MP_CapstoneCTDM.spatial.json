@@ -1,0 +1,2794 @@
+{
+    "Portal_Dynamic": [
+        {
+            "name": "DeployCam",
+            "type": "DeployCam",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": -4.37114e-08,
+                "z": -1
+            },
+            "front": {
+                "x": 0,
+                "y": 1,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": 322.243,
+                "y": 411.723,
+                "z": 216.799
+            },
+            "id": "DeployCam"
+        },
+        {
+            "name": "CombatArea",
+            "CombatVolume": "CombatArea/CollisionPolygon3D",
+            "type": "CombatArea",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 1458.32,
+                "y": 33.5003,
+                "z": 0
+            },
+            "id": "CombatArea",
+            "linked": [
+                "CombatVolume"
+            ]
+        },
+        {
+            "name": "CollisionPolygon3D",
+            "type": "PolygonVolume",
+            "id": "CombatArea/CollisionPolygon3D",
+            "height": 200,
+            "points": [
+                {
+                    "x": 17.2603,
+                    "y": 130.3383,
+                    "z": 21.142
+                },
+                {
+                    "x": -32.3662,
+                    "y": 130.3383,
+                    "z": 42.548
+                },
+                {
+                    "x": -72.824,
+                    "y": 130.3383,
+                    "z": 56.377
+                },
+                {
+                    "x": -67.313,
+                    "y": 130.3383,
+                    "z": 126.803
+                },
+                {
+                    "x": 13.8504,
+                    "y": 130.3383,
+                    "z": 141.913
+                },
+                {
+                    "x": 51.42571,
+                    "y": 130.3383,
+                    "z": 161.6179
+                },
+                {
+                    "x": 146.2845,
+                    "y": 130.3383,
+                    "z": 176.2115
+                },
+                {
+                    "x": 180.731,
+                    "y": 130.3383,
+                    "z": 134.216
+                },
+                {
+                    "x": 234.707,
+                    "y": 130.3383,
+                    "z": 72.595
+                },
+                {
+                    "x": 202.652,
+                    "y": 130.3383,
+                    "z": 46.164
+                },
+                {
+                    "x": 124.4447,
+                    "y": 130.3383,
+                    "z": 1.378
+                }
+            ]
+        },
+        {
+            "name": "HighwaySignPole_01",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 5.14472,
+                "y": 152.047,
+                "z": 140.232
+            },
+            "id": "MapLimits/HighwaySignPole_01"
+        },
+        {
+            "name": "HighwaySignPole_02",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -9.99455,
+                "y": 142.238,
+                "z": 137.368
+            },
+            "id": "MapLimits/HighwaySignPole_02"
+        },
+        {
+            "name": "HighwaySignPole_03",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -22.5159,
+                "y": 141.581,
+                "z": 135.068
+            },
+            "id": "MapLimits/HighwaySignPole_03"
+        },
+        {
+            "name": "HighwaySignPole_04",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -42.0647,
+                "y": 134.959,
+                "z": 131.597
+            },
+            "id": "MapLimits/HighwaySignPole_04"
+        },
+        {
+            "name": "HighwaySignPole_05",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -67.4113,
+                "y": 134.043,
+                "z": 126.583
+            },
+            "id": "MapLimits/HighwaySignPole_05"
+        },
+        {
+            "name": "HighwaySignPole_06",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -54.5881,
+                "y": 134.268,
+                "z": 129.209
+            },
+            "id": "MapLimits/HighwaySignPole_06"
+        },
+        {
+            "name": "HighwaySignPole_07",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -68.1812,
+                "y": 134.794,
+                "z": 116.224
+            },
+            "id": "MapLimits/HighwaySignPole_07"
+        },
+        {
+            "name": "HighwaySignPole_08",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -69.5892,
+                "y": 134.321,
+                "z": 98.1453
+            },
+            "id": "MapLimits/HighwaySignPole_08"
+        },
+        {
+            "name": "HighwaySignPole_09",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -70.9679,
+                "y": 134.576,
+                "z": 82.9774
+            },
+            "id": "MapLimits/HighwaySignPole_09"
+        },
+        {
+            "name": "HighwaySignPole_10",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -71.7766,
+                "y": 129.603,
+                "z": 68.8723
+            },
+            "id": "MapLimits/HighwaySignPole_10"
+        },
+        {
+            "name": "HighwaySignPole_11",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -72.7997,
+                "y": 129.551,
+                "z": 56.324
+            },
+            "id": "MapLimits/HighwaySignPole_11"
+        },
+        {
+            "name": "HighwaySignPole_12",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -54.0335,
+                "y": 129.215,
+                "z": 50.1539
+            },
+            "id": "MapLimits/HighwaySignPole_12"
+        },
+        {
+            "name": "HighwaySignPole_13",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -38.0238,
+                "y": 128.832,
+                "z": 44.7518
+            },
+            "id": "MapLimits/HighwaySignPole_13"
+        },
+        {
+            "name": "HighwaySignPole_14",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -15.3237,
+                "y": 127.807,
+                "z": 35.0392
+            },
+            "id": "MapLimits/HighwaySignPole_14"
+        },
+        {
+            "name": "HighwaySignPole_15",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 5.76148,
+                "y": 126.149,
+                "z": 25.9583
+            },
+            "id": "MapLimits/HighwaySignPole_15"
+        },
+        {
+            "name": "HighwaySignPole_16",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 22.4887,
+                "y": 125.781,
+                "z": 20.0245
+            },
+            "id": "MapLimits/HighwaySignPole_16"
+        },
+        {
+            "name": "HighwaySignPole_17",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 44.0478,
+                "y": 125.297,
+                "z": 16.3414
+            },
+            "id": "MapLimits/HighwaySignPole_17"
+        },
+        {
+            "name": "HighwaySignPole_18",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 65.2312,
+                "y": 124.373,
+                "z": 12.3833
+            },
+            "id": "MapLimits/HighwaySignPole_18"
+        },
+        {
+            "name": "HighwaySignPole_19",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 90.3848,
+                "y": 123.773,
+                "z": 7.39412
+            },
+            "id": "MapLimits/HighwaySignPole_19"
+        },
+        {
+            "name": "HighwaySignPole_20",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 116.327,
+                "y": 121.662,
+                "z": 2.7798
+            },
+            "id": "MapLimits/HighwaySignPole_20"
+        },
+        {
+            "name": "HighwaySignPole_21",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 124.404,
+                "y": 121.406,
+                "z": 1.77385
+            },
+            "id": "MapLimits/HighwaySignPole_21"
+        },
+        {
+            "name": "HighwaySignPole_22",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 139.545,
+                "y": 123.455,
+                "z": 9.73721
+            },
+            "id": "MapLimits/HighwaySignPole_22"
+        },
+        {
+            "name": "HighwaySignPole_23",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 157.279,
+                "y": 123.613,
+                "z": 20.0575
+            },
+            "id": "MapLimits/HighwaySignPole_23"
+        },
+        {
+            "name": "HighwaySignPole_24",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 175.457,
+                "y": 123.244,
+                "z": 30.698
+            },
+            "id": "MapLimits/HighwaySignPole_24"
+        },
+        {
+            "name": "HighwaySignPole_25",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 198.914,
+                "y": 115.62,
+                "z": 44.2358
+            },
+            "id": "MapLimits/HighwaySignPole_25"
+        },
+        {
+            "name": "HighwaySignPole_26",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 221.384,
+                "y": 117.494,
+                "z": 61.3609
+            },
+            "id": "MapLimits/HighwaySignPole_26"
+        },
+        {
+            "name": "HighwaySignPole_27",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 232.591,
+                "y": 122.521,
+                "z": 74.8438
+            },
+            "id": "MapLimits/HighwaySignPole_27"
+        },
+        {
+            "name": "HighwaySignPole_28",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 210.154,
+                "y": 129.825,
+                "z": 100.194
+            },
+            "id": "MapLimits/HighwaySignPole_28"
+        },
+        {
+            "name": "HighwaySignPole_29",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 183.462,
+                "y": 135.348,
+                "z": 131.263
+            },
+            "id": "MapLimits/HighwaySignPole_29"
+        },
+        {
+            "name": "HighwaySignPole_30",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 163.48,
+                "y": 137.862,
+                "z": 155.112
+            },
+            "id": "MapLimits/HighwaySignPole_30"
+        },
+        {
+            "name": "HighwaySignPole_31",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 146.398,
+                "y": 141.138,
+                "z": 176.281
+            },
+            "id": "MapLimits/HighwaySignPole_31"
+        },
+        {
+            "name": "HighwaySignPole_32",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 130.098,
+                "y": 142.066,
+                "z": 173.84
+            },
+            "id": "MapLimits/HighwaySignPole_32"
+        },
+        {
+            "name": "HighwaySignPole_33",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 114.404,
+                "y": 147.144,
+                "z": 171.355
+            },
+            "id": "MapLimits/HighwaySignPole_33"
+        },
+        {
+            "name": "HighwaySignPole_34",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 90.4311,
+                "y": 148.54,
+                "z": 167.513
+            },
+            "id": "MapLimits/HighwaySignPole_34"
+        },
+        {
+            "name": "HighwaySignPole_35",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 65.1132,
+                "y": 173.986,
+                "z": 163.194
+            },
+            "id": "MapLimits/HighwaySignPole_35"
+        },
+        {
+            "name": "HighwaySignPole_36",
+            "type": "HighwaySignPole_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 38.5635,
+                "y": 185.756,
+                "z": 154.014
+            },
+            "id": "MapLimits/HighwaySignPole_36"
+        },
+        {
+            "name": "TEAM1HQ",
+            "visible": false,
+            "AltTeam": "TeamNeutral",
+            "ObjId": 1,
+            "InfantrySpawns": [
+                "TEAM1HQ/SpawnPoint",
+                "TEAM1HQ/SpawnPoint2",
+                "TEAM1HQ/SpawnPoint3",
+                "TEAM1HQ/SpawnPoint4",
+                "TEAM1HQ/SpawnPoint5",
+                "TEAM1HQ/SpawnPoint6",
+                "TEAM1HQ/SpawnPoint17",
+                "TEAM1HQ/SpawnPoint18",
+                "TEAM1HQ/SpawnPoint19",
+                "TEAM1HQ/SpawnPoint20",
+                "TEAM1HQ/SpawnPoint21",
+                "TEAM1HQ/SpawnPoint22",
+                "TEAM1HQ/SpawnPoint23",
+                "TEAM1HQ/SpawnPoint24",
+                "TEAM1HQ/SpawnPoint25",
+                "TEAM1HQ/SpawnPoint26"
+            ],
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -48.2877,
+                "y": 134.484,
+                "z": 97.5983
+            },
+            "id": "TEAM1HQ",
+            "linked": [
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.358792,
+                "y": 0,
+                "z": -0.933418
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.933418,
+                "y": 0,
+                "z": -0.358792
+            },
+            "position": {
+                "x": -59.5739,
+                "y": 134.601386,
+                "z": 89.99703
+            },
+            "id": "TEAM1HQ/SpawnPoint"
+        },
+        {
+            "name": "SpawnPoint2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.0848778,
+                "y": 0,
+                "z": -0.996391
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.996391,
+                "y": 0,
+                "z": -0.0848778
+            },
+            "position": {
+                "x": -34.8469,
+                "y": 134.4727848,
+                "z": 90.36974
+            },
+            "id": "TEAM1HQ/SpawnPoint2"
+        },
+        {
+            "name": "SpawnPoint3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.0936566,
+                "y": 0,
+                "z": -0.995605
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.995605,
+                "y": 0,
+                "z": -0.0936566
+            },
+            "position": {
+                "x": -26.2978,
+                "y": 134.4727848,
+                "z": 82.0281
+            },
+            "id": "TEAM1HQ/SpawnPoint3"
+        },
+        {
+            "name": "SpawnPoint4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.251698,
+                "y": 0,
+                "z": -0.967806
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.967806,
+                "y": 0,
+                "z": -0.251698
+            },
+            "position": {
+                "x": -35.4801,
+                "y": 134.997397,
+                "z": 123.7259
+            },
+            "id": "TEAM1HQ/SpawnPoint4"
+        },
+        {
+            "name": "SpawnPoint5",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.142733,
+                "y": 0,
+                "z": -0.989761
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.989761,
+                "y": 0,
+                "z": -0.142733
+            },
+            "position": {
+                "x": -48.844348,
+                "y": 134.5149296,
+                "z": 100.95985
+            },
+            "id": "TEAM1HQ/SpawnPoint5"
+        },
+        {
+            "name": "SpawnPoint6",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.59544,
+                "y": 0,
+                "z": -0.8034
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.8034,
+                "y": 0,
+                "z": -0.59544
+            },
+            "position": {
+                "x": -43.54209,
+                "y": 134.5042637,
+                "z": 113.5952
+            },
+            "id": "TEAM1HQ/SpawnPoint6"
+        },
+        {
+            "name": "SpawnPoint17",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.49932,
+                "y": 0,
+                "z": -0.866418
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.866418,
+                "y": 0,
+                "z": -0.49932
+            },
+            "position": {
+                "x": -46.94243,
+                "y": 134.47913245,
+                "z": 106.33074
+            },
+            "id": "TEAM1HQ/SpawnPoint17"
+        },
+        {
+            "name": "SpawnPoint18",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.135975,
+                "y": 0,
+                "z": -0.990712
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.990712,
+                "y": 0,
+                "z": 0.135975
+            },
+            "position": {
+                "x": -50.10229,
+                "y": 134.5406559,
+                "z": 94.66475
+            },
+            "id": "TEAM1HQ/SpawnPoint18"
+        },
+        {
+            "name": "SpawnPoint19",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.194953,
+                "y": 0,
+                "z": -0.980813
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.980813,
+                "y": 0,
+                "z": 0.194953
+            },
+            "position": {
+                "x": -52.24129,
+                "y": 134.601386,
+                "z": 85.5748
+            },
+            "id": "TEAM1HQ/SpawnPoint19"
+        },
+        {
+            "name": "SpawnPoint20",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.360876,
+                "y": 0,
+                "z": -0.932614
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.932614,
+                "y": 0,
+                "z": -0.360876
+            },
+            "position": {
+                "x": -44.99716,
+                "y": 134.772284,
+                "z": 120.4076
+            },
+            "id": "TEAM1HQ/SpawnPoint20"
+        },
+        {
+            "name": "SpawnPoint21",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.442038,
+                "y": 0,
+                "z": -0.896996
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.896996,
+                "y": 0,
+                "z": -0.442038
+            },
+            "position": {
+                "x": -32.805,
+                "y": 135.125037,
+                "z": 119.6032
+            },
+            "id": "TEAM1HQ/SpawnPoint21"
+        },
+        {
+            "name": "SpawnPoint22",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.402603,
+                "y": 0,
+                "z": -0.915375
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.915375,
+                "y": 0,
+                "z": -0.402603
+            },
+            "position": {
+                "x": -35.2902,
+                "y": 134.4727848,
+                "z": 102.48188
+            },
+            "id": "TEAM1HQ/SpawnPoint22"
+        },
+        {
+            "name": "SpawnPoint23",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.0910324,
+                "y": 0,
+                "z": -0.995848
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.995848,
+                "y": 0,
+                "z": -0.0910324
+            },
+            "position": {
+                "x": -41.09169,
+                "y": 134.4625309,
+                "z": 93.12059
+            },
+            "id": "TEAM1HQ/SpawnPoint23"
+        },
+        {
+            "name": "SpawnPoint24",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.304515,
+                "y": 0,
+                "z": -0.952507
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.952507,
+                "y": 0,
+                "z": -0.304515
+            },
+            "position": {
+                "x": -36.8836,
+                "y": 134.4727848,
+                "z": 76.2682
+            },
+            "id": "TEAM1HQ/SpawnPoint24"
+        },
+        {
+            "name": "SpawnPoint25",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.081034,
+                "y": 0,
+                "z": -0.996711
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.996711,
+                "y": 0,
+                "z": 0.081034
+            },
+            "position": {
+                "x": -53.19121,
+                "y": 129.31617,
+                "z": 57.8159
+            },
+            "id": "TEAM1HQ/SpawnPoint25"
+        },
+        {
+            "name": "SpawnPoint26",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.388207,
+                "y": 0,
+                "z": -0.921572
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.921572,
+                "y": 0,
+                "z": -0.388207
+            },
+            "position": {
+                "x": -43.47006,
+                "y": 134.4503696,
+                "z": 70.1821
+            },
+            "id": "TEAM1HQ/SpawnPoint26"
+        },
+        {
+            "name": "TEAM2HQ",
+            "visible": false,
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 2,
+            "InfantrySpawns": [
+                "TEAM2HQ/SpawnPoint",
+                "TEAM2HQ/SpawnPoint2",
+                "TEAM2HQ/SpawnPoint3",
+                "TEAM2HQ/SpawnPoint4",
+                "TEAM2HQ/SpawnPoint5",
+                "TEAM2HQ/SpawnPoint6",
+                "TEAM2HQ/SpawnPoint7",
+                "TEAM2HQ/SpawnPoint8",
+                "TEAM2HQ/SpawnPoint9",
+                "TEAM2HQ/SpawnPoint10",
+                "TEAM2HQ/SpawnPoint11",
+                "TEAM2HQ/SpawnPoint12",
+                "TEAM2HQ/SpawnPoint13",
+                "TEAM2HQ/SpawnPoint14",
+                "TEAM2HQ/SpawnPoint15",
+                "TEAM2HQ/SpawnPoint16"
+            ],
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 165.853,
+                "y": 137.602,
+                "z": 145.203
+            },
+            "id": "TEAM2HQ",
+            "linked": [
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.968091,
+                "y": 0,
+                "z": 0.2506
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.2506,
+                "y": 0,
+                "z": -0.968091
+            },
+            "position": {
+                "x": 167.01468,
+                "y": 137.311351,
+                "z": 140.25251
+            },
+            "id": "TEAM2HQ/SpawnPoint"
+        },
+        {
+            "name": "SpawnPoint2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.0400969,
+                "y": 0,
+                "z": 0.999196
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.999196,
+                "y": 0,
+                "z": -0.0400969
+            },
+            "position": {
+                "x": 159.87383,
+                "y": 137.776194,
+                "z": 153.57806
+            },
+            "id": "TEAM2HQ/SpawnPoint2"
+        },
+        {
+            "name": "SpawnPoint3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.932077,
+                "y": 0,
+                "z": 0.362259
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.362259,
+                "y": 0,
+                "z": -0.932077
+            },
+            "position": {
+                "x": 172.07775,
+                "y": 136.47021,
+                "z": 133.8546
+            },
+            "id": "TEAM2HQ/SpawnPoint3"
+        },
+        {
+            "name": "SpawnPoint4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.611168,
+                "y": 0,
+                "z": 0.791501
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.791501,
+                "y": 0,
+                "z": -0.611168
+            },
+            "position": {
+                "x": 154.4627,
+                "y": 138.194743,
+                "z": 159.3735
+            },
+            "id": "TEAM2HQ/SpawnPoint4"
+        },
+        {
+            "name": "SpawnPoint5",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.777552,
+                "y": 0,
+                "z": 0.628818
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628818,
+                "y": 0,
+                "z": -0.777552
+            },
+            "position": {
+                "x": 143.0355,
+                "y": 139.67257,
+                "z": 165.8893
+            },
+            "id": "TEAM2HQ/SpawnPoint5"
+        },
+        {
+            "name": "SpawnPoint6",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.999984,
+                "y": 0,
+                "z": 0.00570715
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.00570715,
+                "y": 0,
+                "z": -0.999984
+            },
+            "position": {
+                "x": 133.8023,
+                "y": 140.91059,
+                "z": 165.7097
+            },
+            "id": "TEAM2HQ/SpawnPoint6"
+        },
+        {
+            "name": "SpawnPoint7",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.882357,
+                "y": 0,
+                "z": 0.470581
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.470581,
+                "y": 0,
+                "z": -0.882357
+            },
+            "position": {
+                "x": 140.1658,
+                "y": 140.20448,
+                "z": 160.5446
+            },
+            "id": "TEAM2HQ/SpawnPoint7"
+        },
+        {
+            "name": "SpawnPoint8",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.00642279,
+                "y": 0,
+                "z": 0.999979
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.999979,
+                "y": 0,
+                "z": 0.00642279
+            },
+            "position": {
+                "x": 145.3944,
+                "y": 140.89418,
+                "z": 150.15643
+            },
+            "id": "TEAM2HQ/SpawnPoint8"
+        },
+        {
+            "name": "SpawnPoint9",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.86767,
+                "y": 0,
+                "z": -0.497141
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.497141,
+                "y": 0,
+                "z": -0.86767
+            },
+            "position": {
+                "x": 176.7521,
+                "y": 135.49421,
+                "z": 129.3114
+            },
+            "id": "TEAM2HQ/SpawnPoint9"
+        },
+        {
+            "name": "SpawnPoint10",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.799055,
+                "y": 0,
+                "z": 0.601257
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.601257,
+                "y": 0,
+                "z": -0.799055
+            },
+            "position": {
+                "x": 177.1606,
+                "y": 134.59953,
+                "z": 120.9843
+            },
+            "id": "TEAM2HQ/SpawnPoint10"
+        },
+        {
+            "name": "SpawnPoint11",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.594444,
+                "y": 0,
+                "z": 0.804137
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.804137,
+                "y": 0,
+                "z": -0.594444
+            },
+            "position": {
+                "x": 209.1227,
+                "y": 129.705,
+                "z": 96.0228
+            },
+            "id": "TEAM2HQ/SpawnPoint11"
+        },
+        {
+            "name": "SpawnPoint12",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.982317,
+                "y": 0,
+                "z": 0.187227
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.187227,
+                "y": 0,
+                "z": -0.982317
+            },
+            "position": {
+                "x": 196.2261,
+                "y": 132.0265,
+                "z": 106.6317
+            },
+            "id": "TEAM2HQ/SpawnPoint12"
+        },
+        {
+            "name": "SpawnPoint13",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.944737,
+                "y": 0,
+                "z": 0.327828
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.327828,
+                "y": 0,
+                "z": -0.944737
+            },
+            "position": {
+                "x": 174.13701,
+                "y": 135.19726,
+                "z": 125.8741
+            },
+            "id": "TEAM2HQ/SpawnPoint13"
+        },
+        {
+            "name": "SpawnPoint14",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.941023,
+                "y": 0,
+                "z": 0.338344
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.338344,
+                "y": 0,
+                "z": -0.941023
+            },
+            "position": {
+                "x": 148.3344,
+                "y": 139.85556,
+                "z": 169.3577
+            },
+            "id": "TEAM2HQ/SpawnPoint14"
+        },
+        {
+            "name": "SpawnPoint15",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.714045,
+                "y": 0,
+                "z": 0.7001
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.7001,
+                "y": 0,
+                "z": -0.714045
+            },
+            "position": {
+                "x": 145.4996,
+                "y": 139.09786,
+                "z": 161.9595
+            },
+            "id": "TEAM2HQ/SpawnPoint15"
+        },
+        {
+            "name": "SpawnPoint16",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.734216,
+                "y": 0,
+                "z": 0.678916
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.678916,
+                "y": 0,
+                "z": -0.734216
+            },
+            "position": {
+                "x": 136.637,
+                "y": 141.16589,
+                "z": 157.7256
+            },
+            "id": "TEAM2HQ/SpawnPoint16"
+        },
+        {
+            "name": "Basketball_01",
+            "ObjId": 9001,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 142.161,
+                "y": 139.723,
+                "z": 165.897
+            },
+            "id": "GameInProgressSpawner/Basketball_01"
+        },
+        {
+            "name": "Basketball_02",
+            "ObjId": 9002,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 156.785,
+                "y": 137.866,
+                "z": 153.787
+            },
+            "id": "GameInProgressSpawner/Basketball_02"
+        },
+        {
+            "name": "Basketball_03",
+            "ObjId": 9003,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 169.547,
+                "y": 136.943,
+                "z": 137.356
+            },
+            "id": "GameInProgressSpawner/Basketball_03"
+        },
+        {
+            "name": "Basketball_04",
+            "ObjId": 9004,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 177.404,
+                "y": 134.496,
+                "z": 119.73
+            },
+            "id": "GameInProgressSpawner/Basketball_04"
+        },
+        {
+            "name": "Basketball_05",
+            "ObjId": 9005,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 204.532,
+                "y": 131.041,
+                "z": 100.318
+            },
+            "id": "GameInProgressSpawner/Basketball_05"
+        },
+        {
+            "name": "Basketball_06",
+            "ObjId": 9006,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 189.393,
+                "y": 128.015,
+                "z": 68.3678
+            },
+            "id": "GameInProgressSpawner/Basketball_06"
+        },
+        {
+            "name": "Basketball_07",
+            "ObjId": 9007,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 162.991,
+                "y": 134.283,
+                "z": 100.548
+            },
+            "id": "GameInProgressSpawner/Basketball_07"
+        },
+        {
+            "name": "Basketball_08",
+            "ObjId": 9008,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 125.12,
+                "y": 141.591,
+                "z": 154.892
+            },
+            "id": "GameInProgressSpawner/Basketball_08"
+        },
+        {
+            "name": "Basketball_09",
+            "ObjId": 9009,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 124.634,
+                "y": 142.686,
+                "z": 138.315
+            },
+            "id": "GameInProgressSpawner/Basketball_09"
+        },
+        {
+            "name": "Basketball_10",
+            "ObjId": 9010,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 92.4867,
+                "y": 141.891,
+                "z": 140.014
+            },
+            "id": "GameInProgressSpawner/Basketball_10"
+        },
+        {
+            "name": "Basketball_11",
+            "ObjId": 9011,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 99.7313,
+                "y": 141.21,
+                "z": 119.664
+            },
+            "id": "GameInProgressSpawner/Basketball_11"
+        },
+        {
+            "name": "Basketball_12",
+            "ObjId": 9012,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 129.575,
+                "y": 134.08,
+                "z": 91.3284
+            },
+            "id": "GameInProgressSpawner/Basketball_12"
+        },
+        {
+            "name": "Basketball_13",
+            "ObjId": 9013,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 156.029,
+                "y": 129.933,
+                "z": 69.3512
+            },
+            "id": "GameInProgressSpawner/Basketball_13"
+        },
+        {
+            "name": "Basketball_14",
+            "ObjId": 9014,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 163.485,
+                "y": 125.348,
+                "z": 41.7024
+            },
+            "id": "GameInProgressSpawner/Basketball_14"
+        },
+        {
+            "name": "Basketball_15",
+            "ObjId": 9015,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 132.852,
+                "y": 124.753,
+                "z": 29.1777
+            },
+            "id": "GameInProgressSpawner/Basketball_15"
+        },
+        {
+            "name": "Basketball_16",
+            "ObjId": 9016,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 113.482,
+                "y": 129.979,
+                "z": 57.1706
+            },
+            "id": "GameInProgressSpawner/Basketball_16"
+        },
+        {
+            "name": "Basketball_17",
+            "ObjId": 9017,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 87.2542,
+                "y": 133.421,
+                "z": 85.0993
+            },
+            "id": "GameInProgressSpawner/Basketball_17"
+        },
+        {
+            "name": "Basketball_18",
+            "ObjId": 9018,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 68.4428,
+                "y": 140.132,
+                "z": 116.712
+            },
+            "id": "GameInProgressSpawner/Basketball_18"
+        },
+        {
+            "name": "Basketball_19",
+            "ObjId": 9019,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 39.7053,
+                "y": 137.446,
+                "z": 108.064
+            },
+            "id": "GameInProgressSpawner/Basketball_19"
+        },
+        {
+            "name": "Basketball_20",
+            "ObjId": 9020,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 53.0555,
+                "y": 133.887,
+                "z": 63.5164
+            },
+            "id": "GameInProgressSpawner/Basketball_20"
+        },
+        {
+            "name": "Basketball_21",
+            "ObjId": 9021,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 89.131,
+                "y": 133.652,
+                "z": 61.5876
+            },
+            "id": "GameInProgressSpawner/Basketball_21"
+        },
+        {
+            "name": "Basketball_22",
+            "ObjId": 9022,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 11.1077,
+                "y": 127.032,
+                "z": 41.0638
+            },
+            "id": "GameInProgressSpawner/Basketball_22"
+        },
+        {
+            "name": "Basketball_23",
+            "ObjId": 9023,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -6.30155,
+                "y": 133.914,
+                "z": 77.1623
+            },
+            "id": "GameInProgressSpawner/Basketball_23"
+        },
+        {
+            "name": "Basketball_24",
+            "ObjId": 9024,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 1.97818,
+                "y": 134.732,
+                "z": 108.671
+            },
+            "id": "GameInProgressSpawner/Basketball_24"
+        },
+        {
+            "name": "Basketball_25",
+            "ObjId": 9025,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -40.2773,
+                "y": 134.793,
+                "z": 124.272
+            },
+            "id": "GameInProgressSpawner/Basketball_25"
+        },
+        {
+            "name": "Basketball_26",
+            "ObjId": 9026,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -46.9249,
+                "y": 134.448,
+                "z": 94.3106
+            },
+            "id": "GameInProgressSpawner/Basketball_26"
+        },
+        {
+            "name": "Basketball_27",
+            "ObjId": 9027,
+            "type": "Basketball_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -22.6247,
+                "y": 129.536,
+                "z": 50.6335
+            },
+            "id": "GameInProgressSpawner/Basketball_27"
+        },
+        {
+            "name": "HQ_PlayerSpawner",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 11,
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 81.8875,
+                "y": 235.736,
+                "z": 67.516
+            },
+            "id": "InProgressHQ/HQ_PlayerSpawner"
+        },
+        {
+            "name": "HQ_PlayerSpawner2",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 12,
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 81.8875,
+                "y": 235.736,
+                "z": 67.516
+            },
+            "id": "InProgressHQ/HQ_PlayerSpawner2"
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 1000,
+            "Area": "InProgressHQ/AreaTrigger/PolygonVolume",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 81.8875,
+                "y": 235.736,
+                "z": 67.516
+            },
+            "id": "InProgressHQ/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "PolygonVolume",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "InProgressHQ/AreaTrigger/PolygonVolume",
+            "height": 30,
+            "points": [
+                {
+                    "x": 79.22169,
+                    "y": 226.06974,
+                    "z": 64.81888
+                },
+                {
+                    "x": 79.32205,
+                    "y": 226.06974,
+                    "z": 70.07753
+                },
+                {
+                    "x": 84.64091,
+                    "y": 226.06974,
+                    "z": 70.31838
+                },
+                {
+                    "x": 84.94198,
+                    "y": 226.06974,
+                    "z": 64.47767
+                }
+            ]
+        }
+    ],
+    "Static": [
+        {
+            "name": "MP_Capstone_Terrain",
+            "type": "MP_Capstone_Terrain",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Capstone_Terrain"
+        },
+        {
+            "name": "MP_Capstone_Assets",
+            "type": "MP_Capstone_Assets",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Capstone_Assets"
+        }
+    ]
+}

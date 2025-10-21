@@ -14,26 +14,28 @@
 /* Config */
 const VERSION = [0, 3, 0];
 const debug = true;
-let GameEnded: boolean = false;  
+let gameEnded: boolean = false;
+let gameStarted = false;  
 let scoreboard: Scoreboard | null = null;
+const spawners: mod.Vector[] = [];
 
 interface GameModeConfig {
     maxLevel: number;
     GunGameSet: GunGameSet;
     timeLimit: number;
-//   freezeTime: number;
+    freezeTime: number;
 //   progressStageEarly: number;
 //   progressStageMid: number;
 //   progressStageLate: number;
-//   team1ID: number;
-//   team2ID: number;
-//   hqRoundStartTeam1: number;
-//   hqRoundStartTeam2: number;
-//   hqInProgressTeam1: number;
-//   hqInProgressTeam2: number;
-//   respawnAreaTriggerID: number;
-//   maxStartingAmmo: boolean;
-//   startSpawnPointID: number;
+    team1ID: number;
+    team2ID: number;
+    hqRoundStartTeam1: number;
+    hqRoundStartTeam2: number;
+    hqInProgressTeam1: number;
+    hqInProgressTeam2: number;
+    respawnAreaTriggerID: number;
+    //maxStartingAmmo: boolean;
+    startSpawnPointID: number;
 }
 
 /* Types */
@@ -143,7 +145,7 @@ class JsPlayer {
     public async checkWinCondition(): Promise<boolean> {
         if (this.level >= GAMEMODE_CONFIG.maxLevel) {
             if (debug) console.log("CheckWinCondition: Player ", this.playerId, "won! Ending Game");
-            GameEnded = true;
+            gameEnded = true;
             JsPlayer.jsPlayerInstances.forEach(player => {
                 if (player.isAi){
                     mod.AIIdleBehavior(player.player);
@@ -298,7 +300,9 @@ class Scoreboard {
     }
 }
 
-
+// -------------------------------
+// Helper Functions
+// -------------------------------
 
 function CheckCorrectPlayerWeaponEquipped(jsPlayer: JsPlayer): boolean {
     if (!jsPlayer.IsDeployed || mod.GetMatchTimeElapsed() - jsPlayer.LastDeployTime < 2)
@@ -314,6 +318,68 @@ function CheckCorrectPlayerWeaponEquipped(jsPlayer: JsPlayer): boolean {
     return correctWeaponEquipped && isCorrectSlotActive;
 }
 
+function createSpawnPoints() {
+  let spawnPointId = GAMEMODE_CONFIG.startSpawnPointID;
+  do {
+    const spawnPoint = mod.GetSpatialObject(spawnPointId); // Even with an invalid ID it returns a SpawnObject so we have to check it by "hand"
+    const spawnPointPosition = mod.GetObjectPosition(spawnPoint);
+    const spawnPointX = mod.XComponentOf(spawnPointPosition); //Not used for check since for some reason it's not 0 but 1e-7...
+    const spawnPointY = mod.YComponentOf(spawnPointPosition);
+    const spawnPointZ = mod.ZComponentOf(spawnPointPosition);
+
+    if (spawnPointY === 0 && spawnPointZ === 0) {
+      // So far the only way I know to check if something exists
+      break;
+    }
+
+    spawners.push(mod.CreateVector(spawnPointX, spawnPointY, spawnPointZ));
+    mod.MoveObject(spawnPoint, mod.CreateVector(-100, -100, -100)); // Because EnableSpatial and Unspawn don't work...
+    spawnPointId++;
+  } while (spawnPointId);
+}
+
+function getFurthestSpawnPointFromEnemies(
+  respawnedPlayer: mod.Player
+): mod.Vector {
+  const players = mod.AllPlayers();
+
+  let furthestSpawnPoint = spawners[0];
+  let furthestSpawnPointDistance = 0;
+
+  for (const spawnPointVector of spawners) {
+    let nearestPlayerDistance = 999999999;
+
+    for (let i = 0; i < mod.CountOf(players); i++) {
+      const player: mod.Player = mod.ValueInArray(players, i);
+
+      if (
+        mod.GetSoldierState(player, mod.SoldierStateBool.IsDead) ||
+        mod.Equals(mod.GetTeam(player), mod.GetTeam(respawnedPlayer))
+      ) {
+        continue;
+      }
+
+      const playerVector = mod.GetSoldierState(
+        player,
+        mod.SoldierStateVector.GetPosition
+      );
+      const distanceBetween = mod.DistanceBetween(
+        spawnPointVector,
+        playerVector
+      );
+
+      nearestPlayerDistance = Math.min(nearestPlayerDistance, distanceBetween);
+    }
+
+    if (furthestSpawnPointDistance < nearestPlayerDistance) {
+      furthestSpawnPoint = spawnPointVector;
+      furthestSpawnPointDistance = nearestPlayerDistance;
+    }
+  }
+
+  return furthestSpawnPoint;
+}
+
 // -------------------------------
 // Settings
 // -------------------------------
@@ -321,24 +387,24 @@ function CheckCorrectPlayerWeaponEquipped(jsPlayer: JsPlayer): boolean {
 const GAMEMODE_CONFIG: GameModeConfig = {
     maxLevel: 3,
     GunGameSet: StandardGunGame,
-    timeLimit: 10*60, // 10 minutes
+    timeLimit: 10*60 + 15, // 10 minutes
 //   score: 75, // 75 kills to win
-//   freezeTime: 15, // Seconds of freeze time at round start
+    freezeTime: 15, // Seconds of freeze time at round start
 //   timeLimit: 10 * 60 + 15, // 10 minutes + freeze time
 //   progressStageEarly: 20, // How many kills to trigger early progress VO
 //   progressStageMid: 40, // How many kills to trigger mid progress VO
 //   progressStageLate: 65, // How many kills to trigger late progress VO
-//   team1ID: 1,
-//   team2ID: 2,
-//   // Beginning HQs - place these in Godot where players spawn at match start
-//   hqRoundStartTeam1: 1,
-//   hqRoundStartTeam2: 2,
-//   // In-progress HQs - place these outside the map, surrounded by area trigger
-//   hqInProgressTeam1: 11,
-//   hqInProgressTeam2: 12,
-//   respawnAreaTriggerID: 1000, // AreaTrigger that surrounds the in-progress HQs
+    team1ID: 1,
+    team2ID: 2,
+    // Beginning HQs - place these in Godot where players spawn at match start
+    hqRoundStartTeam1: 1,
+    hqRoundStartTeam2: 2,
+    // In-progress HQs - place these outside the map, surrounded by area trigger
+    hqInProgressTeam1: 11,
+    hqInProgressTeam2: 12,
+    respawnAreaTriggerID: 1000, // AreaTrigger that surrounds the in-progress HQs
 //   maxStartingAmmo: true,
-//   startSpawnPointID: 9001, // Starting ID for spawn point SpatialObjects. Your spawners need to be a SpatialObject (any object that is an actual prop) in incremental IDs starting from startSpawnPointID or they'll not be parsed
+    startSpawnPointID: 9001, // Starting ID for spawn point SpatialObjects. Your spawners need to be a SpatialObject (any object that is an actual prop) in incremental IDs starting from startSpawnPointID or they'll not be parsed
 };
 
 
@@ -400,7 +466,7 @@ export async function OnPlayerDied(eventPlayer: mod.Player, eventOtherPlayer: mo
         return;
     jsPlayer.deaths++;
     await mod.Wait(2);
-    if (GameEnded){
+    if (gameEnded){
         return;
     }
     mod.UndeployPlayer(eventPlayer);
@@ -424,13 +490,39 @@ export function OnPlayerLeaveGame(eventNumber: number){
     }
 }
 
+export function OnPlayerEnterAreaTrigger(
+  eventPlayer: mod.Player,
+  eventAreaTrigger: mod.AreaTrigger
+) {
+  if (mod.GetObjId(eventAreaTrigger) === GAMEMODE_CONFIG.respawnAreaTriggerID) {
+    // The HQ is surrounded by the zone, teleporting any players to the furthest point available
+    mod.Teleport(eventPlayer, getFurthestSpawnPointFromEnemies(eventPlayer), 0);
+  }
+}
+
 export async function OnGameModeStarted() {
+    gameEnded = false;
     scoreboard = new Scoreboard();
     scoreboard.initializeOnGameStart();
     mod.SetFriendlyFire(false);
     mod.SetSpawnMode(mod.SpawnModes.Deploy);
     mod.SetGameModeTargetScore(GAMEMODE_CONFIG.maxLevel+1);
-    mod.SetGameModeTimeLimit(10 * 60); // 10 minutes
-    GameEnded = false;
+    mod.SetGameModeTimeLimit(GAMEMODE_CONFIG.timeLimit); // 10 minutes
+    
+    // Setup Spawnpoints
+    const team1HQ = mod.GetHQ(GAMEMODE_CONFIG.hqRoundStartTeam1);
+    const team2HQ = mod.GetHQ(GAMEMODE_CONFIG.hqRoundStartTeam2);
+    const team1HQGameStarted = mod.GetHQ(GAMEMODE_CONFIG.hqInProgressTeam1);
+    const team2HQGameStarted = mod.GetHQ(GAMEMODE_CONFIG.hqInProgressTeam2);
+
+    mod.EnableHQ(team1HQGameStarted, false);
+    mod.EnableHQ(team2HQGameStarted, false);
+    createSpawnPoints();
+    //await mod.Wait(GAMEMODE_CONFIG.freezeTime);
+    gameStarted = true;
+    mod.EnableHQ(team1HQ, false);
+    mod.EnableHQ(team2HQ, false);
+    mod.EnableHQ(team1HQGameStarted, true);
+    mod.EnableHQ(team2HQGameStarted, true);
 }
 
