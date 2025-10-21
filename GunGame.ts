@@ -3,7 +3,8 @@
 //      Implemented in Version 0.2.2
 // - Add messages for Start, Taken the lead, Knifed, Close to winning, Win
 // - Randomize weapon list at start of game, depending on numberOfWeapons.
-// - Automatic Spawn at the Spawnpoint furthest away from enemies 
+// x Automatic Spawn at the Spawnpoint furthest away from enemies
+//      Implemented in Version 0.4.0 
 // x Add Basic Scoreboard showing Level, Kills, Deaths 
 //      Implemented in Version 0.3.0
 // - Add UI to display current level, weapon and kills needed to level up, next weapon 
@@ -12,10 +13,10 @@
 
 
 /* Config */
-const VERSION = [0, 3, 0];
+const VERSION = [0, 4, 0];
 const debug = true;
 let gameEnded: boolean = false;
-let gameStarted = false;  
+let gameStarted: boolean = false;  
 let scoreboard: Scoreboard | null = null;
 const spawners: mod.Vector[] = [];
 let tick = 0;
@@ -30,9 +31,6 @@ interface GameModeConfig {
     GunGameSet: GunGameSet;
     timeLimit: number;
     freezeTime: number;
-//   progressStageEarly: number;
-//   progressStageMid: number;
-//   progressStageLate: number;
     team1ID: number;
     team2ID: number;
     hqRoundStartTeam1: number;
@@ -40,7 +38,6 @@ interface GameModeConfig {
     hqInProgressTeam1: number;
     hqInProgressTeam2: number;
     respawnAreaTriggerID: number;
-    //maxStartingAmmo: boolean;
     startSpawnPointID: number;
 }
 
@@ -162,7 +159,7 @@ class JsPlayer {
                 }
             });
             mod.DeployAllPlayers();
-            await mod.Wait(8);
+            await mod.Wait(5);
             mod.EndGameMode(this.player);
             return true;
         }
@@ -333,9 +330,9 @@ function createSpawnPoints() {
     const spawnPointY = mod.YComponentOf(spawnPointPosition);
     const spawnPointZ = mod.ZComponentOf(spawnPointPosition);
 
-    if (spawnPointY === 0 && spawnPointZ === 0) {
+    if (spawnPointX < 0.01 && spawnPointY < 0.01 && spawnPointZ < 0.01) {
       // So far the only way I know to check if something exists
-      break;
+      return;
     }
 
     spawners.push(mod.CreateVector(spawnPointX, spawnPointY, spawnPointZ));
@@ -537,15 +534,10 @@ function updateTimerText(
 // -------------------------------
 
 const GAMEMODE_CONFIG: GameModeConfig = {
-    maxLevel: 3,
+    maxLevel: StandardGunGame.WeaponSets.length,
     GunGameSet: StandardGunGame,
-    timeLimit: 10*60 + 15, // 10 minutes
-//   score: 75, // 75 kills to win
+    timeLimit: 10*60 + 15, // 10 minutes + freeze time
     freezeTime: 15, // Seconds of freeze time at round start
-//   timeLimit: 10 * 60 + 15, // 10 minutes + freeze time
-//   progressStageEarly: 20, // How many kills to trigger early progress VO
-//   progressStageMid: 40, // How many kills to trigger mid progress VO
-//   progressStageLate: 65, // How many kills to trigger late progress VO
     team1ID: 1,
     team2ID: 2,
     // Beginning HQs - place these in Godot where players spawn at match start
@@ -560,7 +552,6 @@ const GAMEMODE_CONFIG: GameModeConfig = {
 };
 
 
-
 // -------------------------------
 // EVENTS
 // -------------------------------
@@ -570,8 +561,7 @@ export async function OnPlayerJoinGame(player: mod.Player) {
     let jsPlayer = JsPlayer.get(player);
     if (!jsPlayer)
         return;
-    mod.DisplayNotificationMessage(mod.Message("Welcome"), player);
-    scoreboard?.update(jsPlayer);
+    //scoreboard?.update(jsPlayer);
 }
 
 export function OnPlayerDeployed(eventPlayer: mod.Player): void {
